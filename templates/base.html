@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="Ru-ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+        <title>Покупай безопасно авто из США с выгодой до 40% от рынка России</title>
+    <meta name="description" content="Как купить авто из США с выгодой до 40% с рынком России">
+
+<link href="{% static 'css/_reset.css' %}" rel="stylesheet">
+<link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/fm.revealator.jquery.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;display=swap&amp;subset=latin,cyrillic">
+<style type="text/css"> undefined + [data-readmore-toggle], undefined[data-readmore]{display: block; width: 100%;}undefined[data-readmore]{transition: height 500ms;overflow: hidden;}
+</style>
+</head>
+<body class="at-top">
+	<div class="page">
+		<header class="header js-fixed">
+        <div class="header__container ukraine">
+            <a class="header__logo-link" href="#"><img class="header__logo" src="{% static 'img/logo.png' %}" alt=""></a>
+            <div class="header__right">
+                <div class="header__all-phone">
+                    <a class="header__phone" href="tel:79099179737">+7 909 917 97 37</a>
+                    
+                    <div class="header__dropdown-phone">
+                        {% comment %}
+                        <a class="header__phone" href="tel:+380735352515">+38 073 535 25 15</a>
+                        <a class="header__phone binct-phone-number-1" href="tel:380975352515">+38 097 535 25 15</a>
+                        <a class="header__phone binct-phone-number-2" href="tel:380955252515">+38 095 525 25 15</a>
+                      {% endcomment %}
+                    </div>
+                </div>
+                <div class="header__open-phone">
+                    <img class="adaptive-menu__icon" src="{% static 'img/phone-call.svg' %}" alt="">
+                    <ul class="header__dropdown-menu">
+                        <li>
+                            <a class="header__phone binct-phone-number-1" href="tel:79099179737">+7 909 917 97 37</a>
+                        </li>
+                        {% comment %}
+                        <li>
+                            <a class="header__phone binct-phone-number-2" href="tel:380735352515">+38 073 535 25 15</a>
+                        </li>
+                        <li>
+                            <a class="header__phone" href="tel:380975352515">+38 097 535 25 15</a>
+                        </li>
+                        <li>
+                            <a class="header__phone" href="tel:380955252515">+38 095 525 25 15</a>                           
+                        </li>
+                        {% endcomment %}
+                    </ul>
+                </div>
+                <div class="header__mobile-socials">
+                    <img class="adaptive-menu__icon" src="{% static "img/socials-outline.svg" %}" alt="">
+                    <ul class="header__dropdown-menu">
+                        <li>
+                            <a href="https://cutt.ly/9bcxXmR" class="header__social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 300 300" xml:space="preserve" width="20px" height="20px" class="">
+                                    <path d="M5.299,144.645l69.126,25.8l26.756,86.047c1.712,5.511,8.451,7.548,12.924,3.891l38.532-31.412   c4.039-3.291,9.792-3.455,14.013-0.391l69.498,50.457c4.785,3.478,11.564,0.856,12.764-4.926L299.823,29.22   c1.31-6.316-4.896-11.585-10.91-9.259L5.218,129.402C-1.783,132.102-1.722,142.014,5.299,144.645z M96.869,156.711l135.098-83.207   c2.428-1.491,4.926,1.792,2.841,3.726L123.313,180.87c-3.919,3.648-6.447,8.53-7.163,13.829l-3.798,28.146   c-0.503,3.758-5.782,4.131-6.819,0.494l-14.607-51.325C89.253,166.16,91.691,159.907,96.869,156.711z" data-original="#000000" class="active-path" fill="#FFFFFF"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        {% comment %}
+                        <li>
+                            <a href="https://bit.ly/33dKGqF" class="header__social-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fb" d="M17.3049 0H2.69519C1.20679 0 0.000152588 1.20659 0.000152588 2.69504V17.3049C0.000152588 18.7933 1.20674 19.9999 2.69519 19.9999H9.90064L9.91292 12.853H8.05616C7.81486 12.853 7.61902 12.6579 7.61809 12.4166L7.60918 10.1129C7.60825 9.87025 7.80469 9.67308 8.04731 9.67308H9.90069V7.44709C9.90069 4.86384 11.4784 3.45724 13.7828 3.45724H15.6738C15.9157 3.45724 16.1119 3.65339 16.1119 3.89537V5.83789C16.1119 6.07978 15.9158 6.27587 15.674 6.27602L14.5135 6.27655C13.2603 6.27655 13.0177 6.87207 13.0177 7.74602V9.67313H15.7714C16.0338 9.67313 16.2374 9.90225 16.2064 10.1628L15.9334 12.4666C15.9073 12.687 15.7203 12.8531 15.4984 12.8531H13.0299L13.0177 20H17.305C18.7934 20 20 18.7934 20 17.305V2.69504C20 1.20659 18.7934 0 17.3049 0Z" fill="white"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                           <a href="https://bit.ly/3aYg6p3" class="header__social-link">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.8463 0.924805H4.15374C1.85969 0.924805 0 2.7845 0 5.07855V10.9236C0 13.2176 1.85969 15.0773 4.15374 15.0773H15.8463C18.1403 15.0773 20 13.2176 20 10.9236V5.07855C20 2.7845 18.1403 0.924805 15.8463 0.924805ZM13.0371 8.28544L7.56814 10.8938C7.42241 10.9633 7.25408 10.8571 7.25408 10.6956V5.31586C7.25408 5.15213 7.42684 5.04601 7.57287 5.12002L13.0418 7.89143C13.2044 7.97381 13.2016 8.207 13.0371 8.28544Z" fill="white"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/enjoycars.ua?igshid=YmMyMTA2M2Y=" class="header__social-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.0419 0.000976562H5.95811C2.67279 0.000976562 0 2.67377 0 5.95908V14.0429C0 17.3282 2.67279 20.001 5.95811 20.001H14.0419C17.3272 20.001 20 17.3282 20 14.0429V5.95908C20 2.67377 17.3272 0.000976562 14.0419 0.000976562ZM17.988 14.0429C17.988 16.2222 16.2213 17.989 14.0419 17.989H5.95811C3.77875 17.989 2.012 16.2222 2.012 14.0429V5.95908C2.012 3.77969 3.77875 2.01298 5.95811 2.01298H14.0419C16.2213 2.01298 17.988 3.77969 17.988 5.95908V14.0429Z" fill="white"></path>
+                                    <path d="M9.99998 4.82812C7.14774 4.82812 4.82727 7.1486 4.82727 10.0008C4.82727 12.853 7.14774 15.1735 9.99998 15.1735C12.8522 15.1735 15.1727 12.853 15.1727 10.0008C15.1727 7.14856 12.8522 4.82812 9.99998 4.82812ZM9.99998 13.1615C8.25435 13.1615 6.83927 11.7465 6.83927 10.0008C6.83927 8.25521 8.25439 6.84012 9.99998 6.84012C11.7456 6.84012 13.1607 8.25521 13.1607 10.0008C13.1607 11.7464 11.7456 13.1615 9.99998 13.1615Z" fill="white"></path>
+                                    <path d="M15.1827 6.10642C15.8673 6.10642 16.4222 5.55148 16.4222 4.86693C16.4222 4.18238 15.8673 3.62744 15.1827 3.62744C14.4982 3.62744 13.9432 4.18238 13.9432 4.86693C13.9432 5.55148 14.4982 6.10642 15.1827 6.10642Z" fill="white"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        {% endcomment %}
+                       
+                        <li>
+                            <a href="https://cutt.ly/5bckKDE" class="header__social-link">
+                                <svg width="24" height="24" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M44.781 13.156c-.781-2.789-2.328-4.992-4.593-6.55-2.86-1.973-6.149-2.668-8.989-3.094-3.93-.586-7.488-.668-10.883-.254-3.18.39-5.574 1.012-7.757 2.015-4.282 1.97-6.852 5.153-7.637 9.461a58.837 58.837 0 0 0-.79 5.79c-.343 4.171-.03 7.863.954 11.285.96 3.336 2.637 5.718 5.125 7.285.633.398 1.445.687 2.23.965.446.156.88.308 1.235.476.328.153.328.18.324.453-.027 2.371 0 7.02 0 7.02l.008.992h1.781l.29-.281c.19-.18 4.605-4.446 6.179-6.164l.215-.239c.27-.312.27-.312.547-.316 2.125-.043 4.296-.125 6.453-.242 2.613-.14 5.64-.395 8.492-1.582 2.61-1.09 4.515-2.82 5.66-5.14 1.195-2.423 1.902-5.044 2.168-8.016.469-5.227.137-9.762-1.012-13.864zM35.383 33.48c-.656 1.067-1.633 1.81-2.785 2.29-.844.351-1.703.277-2.535-.075-6.965-2.949-12.43-7.593-16.04-14.273-.746-1.375-1.261-2.875-1.855-4.328-.121-.297-.113-.649-.168-.977.05-2.347 1.852-3.672 3.672-4.07.695-.156 1.312.09 1.828.586a16.005 16.005 0 0 1 3.41 4.715c.371.777.203 1.465-.43 2.043-.132.12-.27.23-.414.34-1.445 1.085-1.656 1.91-.886 3.546 1.312 2.785 3.492 4.657 6.308 5.817.742.304 1.442.152 2.008-.45.078-.078.164-.156.219-.25 1.11-1.851 2.723-1.667 4.21-.613.977.696 1.927 1.43 2.891 2.137 1.473 1.082 1.461 2.098.567 3.562zM26.145 15c-.329 0-.657.027-.98.082a.999.999 0 1 1-.328-1.973c.429-.074.87-.109 1.308-.109C30.477 13 34 16.523 34 20.855c0 .442-.035.883-.11 1.31a1 1 0 0 1-1.972-.33A5.865 5.865 0 0 0 26.145 15zM31 21c0 .55-.45 1-1 1s-1-.45-1-1c0-1.652-1.348-3-3-3-.55 0-1-.45-1-1s.45-1 1-1c2.758 0 5 2.242 5 5zm5.71 2.223a1 1 0 0 1-1.952-.446 8.875 8.875 0 0 0 .219-1.96c0-4.86-3.957-8.817-8.817-8.817-.664 0-1.324.074-1.96.219a.996.996 0 0 1-1.196-.754.996.996 0 0 1 .754-1.195c.781-.18 1.59-.27 2.402-.27 5.965 0 10.817 4.852 10.817 10.816 0 .813-.09 1.622-.266 2.407z" fill="white"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                                <div class="header__socials">
+                    {% comment %}                
+                    <a href="https://bit.ly/33dKGqF" class="header__social-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fb" d="M17.3049 0H2.69519C1.20679 0 0.000152588 1.20659 0.000152588 2.69504V17.3049C0.000152588 18.7933 1.20674 19.9999 2.69519 19.9999H9.90064L9.91292 12.853H8.05616C7.81486 12.853 7.61902 12.6579 7.61809 12.4166L7.60918 10.1129C7.60825 9.87025 7.80469 9.67308 8.04731 9.67308H9.90069V7.44709C9.90069 4.86384 11.4784 3.45724 13.7828 3.45724H15.6738C15.9157 3.45724 16.1119 3.65339 16.1119 3.89537V5.83789C16.1119 6.07978 15.9158 6.27587 15.674 6.27602L14.5135 6.27655C13.2603 6.27655 13.0177 6.87207 13.0177 7.74602V9.67313H15.7714C16.0338 9.67313 16.2374 9.90225 16.2064 10.1628L15.9334 12.4666C15.9073 12.687 15.7203 12.8531 15.4984 12.8531H13.0299L13.0177 20H17.305C18.7934 20 20 18.7934 20 17.305V2.69504C20 1.20659 18.7934 0 17.3049 0Z" fill="white"></path>
+                        </svg>
+                    </a>
+                   
+                    <a href="https://bit.ly/3aYg6p3" class="header__social-link">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8463 0.924805H4.15374C1.85969 0.924805 0 2.7845 0 5.07855V10.9236C0 13.2176 1.85969 15.0773 4.15374 15.0773H15.8463C18.1403 15.0773 20 13.2176 20 10.9236V5.07855C20 2.7845 18.1403 0.924805 15.8463 0.924805ZM13.0371 8.28544L7.56814 10.8938C7.42241 10.9633 7.25408 10.8571 7.25408 10.6956V5.31586C7.25408 5.15213 7.42684 5.04601 7.57287 5.12002L13.0418 7.89143C13.2044 7.97381 13.2016 8.207 13.0371 8.28544Z" fill="white"></path>
+                        </svg>
+                    </a>
+                     {% endcomment %}
+                    <a href="https://cutt.ly/9bcxXmR" class="header__social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 300 300" xml:space="preserve" width="20px" height="20px" class="">
+                            <path d="M5.299,144.645l69.126,25.8l26.756,86.047c1.712,5.511,8.451,7.548,12.924,3.891l38.532-31.412   c4.039-3.291,9.792-3.455,14.013-0.391l69.498,50.457c4.785,3.478,11.564,0.856,12.764-4.926L299.823,29.22   c1.31-6.316-4.896-11.585-10.91-9.259L5.218,129.402C-1.783,132.102-1.722,142.014,5.299,144.645z M96.869,156.711l135.098-83.207   c2.428-1.491,4.926,1.792,2.841,3.726L123.313,180.87c-3.919,3.648-6.447,8.53-7.163,13.829l-3.798,28.146   c-0.503,3.758-5.782,4.131-6.819,0.494l-14.607-51.325C89.253,166.16,91.691,159.907,96.869,156.711z" data-original="#000000" class="active-path" fill="#FFFFFF"></path>
+                        </svg>
+                    </a>
+                    {% comment %}
+                    <a href="https://instagram.com/enjoycars.ua?igshid=YmMyMTA2M2Y=" class="header__social-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.0419 0.000976562H5.95811C2.67279 0.000976562 0 2.67377 0 5.95908V14.0429C0 17.3282 2.67279 20.001 5.95811 20.001H14.0419C17.3272 20.001 20 17.3282 20 14.0429V5.95908C20 2.67377 17.3272 0.000976562 14.0419 0.000976562ZM17.988 14.0429C17.988 16.2222 16.2213 17.989 14.0419 17.989H5.95811C3.77875 17.989 2.012 16.2222 2.012 14.0429V5.95908C2.012 3.77969 3.77875 2.01298 5.95811 2.01298H14.0419C16.2213 2.01298 17.988 3.77969 17.988 5.95908V14.0429Z" fill="white"></path>
+                            <path d="M9.99998 4.82812C7.14774 4.82812 4.82727 7.1486 4.82727 10.0008C4.82727 12.853 7.14774 15.1735 9.99998 15.1735C12.8522 15.1735 15.1727 12.853 15.1727 10.0008C15.1727 7.14856 12.8522 4.82812 9.99998 4.82812ZM9.99998 13.1615C8.25435 13.1615 6.83927 11.7465 6.83927 10.0008C6.83927 8.25521 8.25439 6.84012 9.99998 6.84012C11.7456 6.84012 13.1607 8.25521 13.1607 10.0008C13.1607 11.7464 11.7456 13.1615 9.99998 13.1615Z" fill="white"></path>
+                            <path d="M15.1827 6.10642C15.8673 6.10642 16.4222 5.55148 16.4222 4.86693C16.4222 4.18238 15.8673 3.62744 15.1827 3.62744C14.4982 3.62744 13.9432 4.18238 13.9432 4.86693C13.9432 5.55148 14.4982 6.10642 15.1827 6.10642Z" fill="white"></path>
+                        </svg>
+                    </a>
+                    {% endcomment %}
+                    <a href="https://cutt.ly/5bckKDE" class="header__social-link">
+                        <svg width="24" height="24" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44.781 13.156c-.781-2.789-2.328-4.992-4.593-6.55-2.86-1.973-6.149-2.668-8.989-3.094-3.93-.586-7.488-.668-10.883-.254-3.18.39-5.574 1.012-7.757 2.015-4.282 1.97-6.852 5.153-7.637 9.461a58.837 58.837 0 0 0-.79 5.79c-.343 4.171-.03 7.863.954 11.285.96 3.336 2.637 5.718 5.125 7.285.633.398 1.445.687 2.23.965.446.156.88.308 1.235.476.328.153.328.18.324.453-.027 2.371 0 7.02 0 7.02l.008.992h1.781l.29-.281c.19-.18 4.605-4.446 6.179-6.164l.215-.239c.27-.312.27-.312.547-.316 2.125-.043 4.296-.125 6.453-.242 2.613-.14 5.64-.395 8.492-1.582 2.61-1.09 4.515-2.82 5.66-5.14 1.195-2.423 1.902-5.044 2.168-8.016.469-5.227.137-9.762-1.012-13.864zM35.383 33.48c-.656 1.067-1.633 1.81-2.785 2.29-.844.351-1.703.277-2.535-.075-6.965-2.949-12.43-7.593-16.04-14.273-.746-1.375-1.261-2.875-1.855-4.328-.121-.297-.113-.649-.168-.977.05-2.347 1.852-3.672 3.672-4.07.695-.156 1.312.09 1.828.586a16.005 16.005 0 0 1 3.41 4.715c.371.777.203 1.465-.43 2.043-.132.12-.27.23-.414.34-1.445 1.085-1.656 1.91-.886 3.546 1.312 2.785 3.492 4.657 6.308 5.817.742.304 1.442.152 2.008-.45.078-.078.164-.156.219-.25 1.11-1.851 2.723-1.667 4.21-.613.977.696 1.927 1.43 2.891 2.137 1.473 1.082 1.461 2.098.567 3.562zM26.145 15c-.329 0-.657.027-.98.082a.999.999 0 1 1-.328-1.973c.429-.074.87-.109 1.308-.109C30.477 13 34 16.523 34 20.855c0 .442-.035.883-.11 1.31a1 1 0 0 1-1.972-.33A5.865 5.865 0 0 0 26.145 15zM31 21c0 .55-.45 1-1 1s-1-.45-1-1c0-1.652-1.348-3-3-3-.55 0-1-.45-1-1s.45-1 1-1c2.758 0 5 2.242 5 5zm5.71 2.223a1 1 0 0 1-1.952-.446 8.875 8.875 0 0 0 .219-1.96c0-4.86-3.957-8.817-8.817-8.817-.664 0-1.324.074-1.96.219a.996.996 0 0 1-1.196-.754.996.996 0 0 1 .754-1.195c.781-.18 1.59-.27 2.402-.27 5.965 0 10.817 4.852 10.817 10.816 0 .813-.09 1.622-.266 2.407z" fill="white"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__adaptive-phone">
+                    <a class="header__phone binct-phone-number-1" href="tel:79099179737">+7 909 917 97 37</a>
+                    {% comment %}
+                    <a class="header__phone binct-phone-number-2" href="tel:380735352515">+38 073 535 25 15</a>
+<!--                    <a class="header__phone" href="tel:--><!--">--><!--</a>-->
+                    <a class="header__phone" href="tel:380975352515">+38 097 535 25 15</a>
+                    <a class="header__phone" href="tel:380955252515">+38 095 525 25 15</a>
+                    {% endcomment %}
+                </div>
+                {% comment %}
+                <div class="header__dropdown">
+                    <div class="header__select">
+                        <span class="header__span">Укр</span>
+                    </div>
+                                        <ul class="header__dropdown-menu">
+                                                                                                        <a href="/ru">
+                                <li>Рус</li></a>                                            </ul>
+                </div>
+                {% endcomment %}
+                <div class="adaptive-menu">
+                    <div class="adaptive-menu__open-menu"><img class="adaptive-menu__icon" src="{% static 'img/menu.svg' %}" alt="">
+                    </div>
+                    <div class="adaptive-menu__full-menu">
+                        <a class="adaptive-menu__close-menu"><img src="{% static 'img/x.svg' %}" alt=""></a>
+                        <nav class="adaptive-menu__menu-top">
+        <a class="adaptive-menu__link" href="#advantages">Преимущества</a>
+        <a class="adaptive-menu__link" href="#stage">Этапы покупки</a>
+        <a class="adaptive-menu__link" href="#popular">Авто в бюджет</a>
+        <a class="adaptive-menu__link" href="#services">Вопросы и ответы</a>
+        <!--<a class="adaptive-menu__link" href="#counter">Показатели</a>-->
+        <a class="adaptive-menu__link" href="#feedback">Подобрать авто</a>
+        <!--<a class="adaptive-menu__link" href="#contacts">Контакти</a>-->
+</nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+    	<section id="main-block" class="main-block">
+                    <div class="main-block__layout" style="background-image: url('{% static 'img/bg-intro.png' %}')">
+                <div class="main-block__container">
+                    <div class="main-block__left">
+                        <h1 class="main-block__caption">Мы привозим только <span>максимально</span> выгодные,  проверенные и ликвидные <br> авто из США <span>для Вас</span></h1>
+    <div class="main-block__widgets">
+
+        <div class="main-block__icon-box">
+            <div class="main-block__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59px" height="56px" x="0px" y="0px" viewBox="0 0 505 491">
+                    <style type="text/css">
+                        .st2{fill:none;stroke:#EEBE2C;stroke-width:12;stroke-miterlimit:10;}
+                    </style>
+                    <path d="M451.9,225.5l-0.9-0.3c-13.1-3.8-26.8,3.8-30.6,16.8c-5.6,19.5-15.3,52.3-18.2,62.3l-35.1,26.2l-6-2.7 l21.8-22.2c9-9.1,9.3-23.6,0.9-33.3c-8.5-9.8-23.2-11-33.3-3.1l-58.1,44.4c-4.5,3.4-8.1,8-10.1,13.2l-31,98.7l83.7,33l13.2-54.2 l84-49.2c6.2-3.7,10.9-9.6,12.9-16.6l23.1-83.6V255C471.8,242.4,464.5,229.3,451.9,225.5z M450.9,250.5l-23,83.2 c-0.8,2.5-2.5,4.8-4.8,6.2l-90.6,53l-10.1,41.5l-48.8-19.2l25.6-81.8c0.9-2,2.3-3.8,4-5.2l58.4-44.6l0.1-0.1 c2.5-2,6.2-1.7,8.4,0.7c2.3,2.4,2.2,6.2-0.2,8.7L330,333.5l39.2,18l48.6-36.2l0.8-2.9c0.1-0.5,12.3-42.1,19-65.3 c1-3.3,4.5-5.3,7.9-4.5l0.7,0.3C449.9,243.6,451.9,247.2,450.9,250.5z" fill="#ffffff"></path>
+                    <path d="M217.2,327.3l-0.5-0.5c-2.1-5.2-5.6-9.9-10.1-13.2l-58.1-44.4c-10.1-8.1-24.8-6.7-33.3,3.1 c-8.4,9.6-8.1,24.1,0.9,33.2l21.9,22.3l-6,2.7l-35.1-26.2c-2.9-9.9-12.5-42.7-18.1-62.2c-3.8-13.1-17.5-20.6-30.6-16.9l-0.9,0.3 c-12.6,3.8-19.8,16.8-16.5,29.6l23.1,83.5l0.1,0.2c2.1,7,6.7,12.9,13,16.6l84,49.1l13.2,54.2l83.7-33L217.2,327.3z M166.6,392.9 l-90.6-53c-2.4-1.4-4-3.6-4.8-6.2l-23-83.2c-0.9-3.3,1.1-6.9,4.4-7.8l0.7-0.3c3.4-0.8,6.9,1.3,7.9,4.6 c6.7,23.1,18.9,64.8,19,65.2l0.8,2.9l48.6,36.2l39.2-18l-40-40.6c-2.3-2.4-2.4-6.2-0.1-8.6c2.2-2.4,5.9-2.7,8.4-0.7l58.3,44.6 l0.2,0.1c1.7,1.4,3.2,3.1,4,5.2l25.6,81.8l-48.5,19.3L166.6,392.9z" fill="#ffffff"></path>
+                    <path d="M379,108.2l-5-4.6c0-0.1-0.1-0.2-0.2-0.3L353,54.8c-4.4-10.3-14.7-17-25.9-16.9H175.7 c-11.2-0.1-21.4,6.6-25.9,16.9l-20.5,47.8l-7.8,6.3c-8.3,7-13.2,17.3-13.3,28.2v82.7c0.2,15.3,13,28,28.2,28H152 c15.4-0.1,27.8-12.6,27.9-28v-8.2h139.4v8.2c0.1,15.4,12.5,27.8,27.9,28h15.6c15.3,0,28.1-12.7,28.1-28V135 C390.7,124.8,386.4,115.1,379,108.2z M166.6,61.9c1.6-3.6,5.2-6,9.2-5.9h151.3c4-0.1,7.6,2.3,9.2,5.9l15.4,35.8H346 c-5-23.5-28.1-38.6-51.6-33.6c-16.8,3.5-30,16.7-33.6,33.6H151.1L166.6,61.9z M327.1,97.7h-47.5c3.6-9.1,12.9-16.4,23.8-16.4 C314.3,81.3,323.4,88.6,327.1,97.7z M161.8,219.9c-0.1,5.3-4.4,9.8-9.8,9.9h-15.6c-5.4-0.1-9.8-4.4-10-9.9v-10.3 c3.6,1.1,6.6,2.1,10,2.1h25.3V219.9z M372.7,220c-0.2,5.3-4.5,9.7-10,9.8h-15.6c-5.3-0.1-9.7-4.4-9.8-9.9v-8.2h25.3 c3.3,0,6.3-1,10-2.1V220z M372.7,183.6c-0.2,5.4-4.5,9.9-10,10H136.4c-5.4-0.2-9.9-4.5-10-10v-46.4c0.1-5.6,2.6-10.9,6.9-14.5 l8.3-7h218.9l5.9,5.5c3.8,3.6,6.1,8.6,6.2,13.8L372.7,183.6L372.7,183.6z" fill="#EEBE2C"></path>
+                    <line class="st2" x1="182.8" y1="143.4" x2="312.8" y2="143.4"></line>
+                    <line class="st2" x1="182.5" y1="169.8" x2="312.5" y2="169.8"></line>
+                </svg>
+            </div>
+            <div class="main-block__icon-text">10+ этапов авторского <br>  подбора автомобиля  </div>
+        </div>
+
+<div class="main-block__icon-box">
+<div class="main-block__icon">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49px" height="56px" x="0px" y="0px" viewBox="0 0 505 491">
+        <style type="text/css">
+            .st0{fill:none;stroke:#EEBE2C;stroke-width:12;stroke-miterlimit:10;}
+            .st1{fill:none;stroke:#EEBE2C;stroke-width:15;stroke-miterlimit:10;}
+            .st2{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+            .st3{font-family:'Roboto-Black';}
+            .st4{font-size:42.7315px;}
+            .st5{letter-spacing:2;}
+            .st6{fill:#FFFFFF;}
+            .st7{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+            .st8{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+        </style>
+        <line class="st0" x1="134" y1="146.6" x2="356.5" y2="146.6"></line>
+        <line class="st0" x1="134" y1="182" x2="356.5" y2="182"></line>
+        <path class="st1" d="M375.7,429.9H119.2c-15,0-27.2-12.2-27.2-27.2V50.4c0-15,12.2-27.2,27.2-27.2h256.6c15,0,27.2,12.2,27.2,27.2 v352.3C402.9,417.7,390.8,429.9,375.7,429.9z"></path>
+        <line class="st0" x1="134" y1="217.3" x2="356.5" y2="217.3"></line>
+        <line class="st0" x1="134" y1="252.7" x2="356.5" y2="252.7"></line>
+        <line class="st0" x1="134" y1="288.1" x2="356.5" y2="288.1"></line>
+        <line class="st0" x1="135.5" y1="323.4" x2="282.8" y2="323.4"></line>
+        <text transform="matrix(1 0 0 1 122.0568 103.7697)" class="st2 st3 st4 st5">CONTRACT</text>
+        <path class="st6" d="M298.6,387.3c0.5,3.2,2.2,4.2,4.4,5.3c2.1,1,7.5-3.9,9.2-4.8c10.6-6,25,1,36.4,1c6.7,0,3.8-9.1-2.9-9.1 c-13.3,0-25.8-0.9-38.9,1.6c0-0.9,1.2-5,0.4-6.6c-2.5-4.9-5.6-3.3-8.7-2.7c-0.2-0.6,1.1-4.1,0.8-4.7c-0.8-1.6-4.9,0.6-6.2,0.3 c3.7-7.4,7.5-18.2,5.1-24.5c-0.7-1.9-2.8-2.9-4.5-3c-7-0.3-12.9,8.2-17.4,13.2c-11.2,12.7-21.1,27.1-30.6,41.5 c-4.1,6.2,3.5,10.7,7.5,4.6c8.5-12.7,23.3-31,33-42.5c-2.3,4.4-7.7,16.1-10.3,20.3c-3.7,6.6,3.7,12.3,7.5,6.1 c0.9-1.6,3.6-5.7,4.8-6.7c-0.3,0.7-2,4.4-2.2,5.2l0,0c-0.2,0.5-0.4,1-0.6,1.4c-2.3,6.8,4.9,9.9,8.1,4.6c0.8-1.3,4.5-7.1,5.2-8.6 C298.4,380.2,298.4,385.9,298.6,387.3z"></path>
+        <polygon class="st7" points="373.4,347.1 381.8,349.6 425.1,207.5 396.2,198.7 352.7,341.1 361.1,343.5"></polygon>
+        <path class="st8" d="M358.3,380.6l3.8-4.4l-7.9-2.5l0.8,5.8C355.3,381.9,356.8,382.4,358.3,380.6z"></path>
+        <polygon class="st2" points="377.4,358 378.8,353.6 353.1,346.1 351.7,350.7 353.8,368.1 365.3,371.4"></polygon>
+        <path class="st7" d="M426.3,203.8l2.9,0.9c1.5-5.1,3-10.4,4.5-16.1l1.9,0.6l1.9,0.6l2,0.6l-17.3,56.9c-0.6,2.1,0.5,4.3,2.6,4.9 l0.8,0.2c2.1,0.6,4.3-0.5,4.9-2.6l25.3-83.3c0.6-2.1-0.5-4.3-2.6-4.9l-0.8-0.3c-2.1-0.6-4.3,0.5-4.9,2.6l-3.5,11.6l-2.7-0.7 l-1.9-0.6l-1.9-0.6c2.2-9.1,4.4-18.4,6.3-27.7c1.9-8.8,3.5-17.5,5-25.7c2.8-16.3,4.5-30.6,4.5-40l-8.9-2.7 c-5.3,7.8-11.8,20.7-18.6,35.9c-4.8,10.7-9.6,22.6-14.3,34.5c-6.2,16-11.9,32.2-16.2,46.3l1.9,0.6L426.3,203.8z"></path>
+    </svg>
+</div>
+                                <div class="main-block__icon-text">Гарантируем конечную  <br>цену авто в договоре</div>
+                            </div>
+
+    <div class="main-block__icon-box">
+        <div class="main-block__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58px" height="58px" x="0px" y="0px" viewBox="0 0 505 491">
+                <path class="st0" d="M183.8,129.2c0,48.3,39.3,87.6,87.6,87.6s87.6-39.3,87.6-87.6s-39.3-87.6-87.6-87.6S183.8,81,183.8,129.2z M343,129.2c0,39.5-32.1,71.6-71.6,71.6s-71.6-32.1-71.6-71.6c0-39.5,32.1-71.6,71.6-71.6S343,89.7,343,129.2z" fill="#FFFFFF"></path>
+                <path class="st1" d="M125.8,447c3.1,3.1,8.1,3.1,11.2,0.1l38.6-38c6.6-6.6,8.5-16.3,5.7-24.7l8.3-8c4.5-4.3,10.4-6.7,16.6-6.7H312 c18.8,0,36.5-7.2,50-20.3c0.6-0.5-4.2,5.1,72.2-86.2c11.3-13.4,9.6-33.5-3.8-44.9c-13.3-11.2-33.3-9.6-44.7,3.6l-47,48.3 c-5.9-7.3-15-11.8-24.7-11.8h-88.8c-12.6-5.3-26-8-39.9-8c-38.3,0-71.8,17.7-89.8,50.9c-7.6-1.4-15.5,0.9-21.3,6.6l-37.9,38 c-3.1,3.1-3.1,8.1,0,11.2L125.8,447z M185.4,266.1c12.2,0,24,2.5,35,7.3c1,0.4,2.1,0.7,3.2,0.7H314c8.6,0,15.9,7,15.9,15.9 c0,8.8-7.1,15.9-15.9,15.9h-64.9c-4.4,0-8,3.6-8,8c0,4.4,3.6,8,8,8H314c17.6,0,31.8-14.3,31.8-31.8c0-1.4-0.1-2.8-0.3-4.2 c45.4-46.7,51.8-53.3,52.1-53.6c5.7-6.7,15.7-7.5,22.4-1.9c6.7,5.7,7.6,15.7,1.9,22.5l-71.4,85.3c-10.4,10-24.1,15.5-38.6,15.5 H206.2c-10.4,0-20.2,4-27.6,11.2l-6.8,6.5L109.5,309C124,281.7,151.4,266.1,185.4,266.1z M85.6,319c2.6-2.6,6.7-3.1,9.9-1.1 c1.4,0.8-2.6-2.8,68.9,68.7c3.2,3.2,3,8.3,0,11.2l-32.9,32.4l-78.2-78.8L85.6,319z" fill="#EEBE2C"></path>
+                <path class="st0" d="M261.8,81.5v9.3c-9.3,3.3-15.9,12.1-15.9,22.5c0,13.2,10.7,23.9,23.9,23.9c4.4,0,8,3.6,8,8s-3.6,8-8,8 c-3.4,0-7.1-2.1-10.3-6c-2.8-3.4-7.8-3.8-11.2-1c-3.4,2.8-3.8,7.8-1,11.2c4.3,5.1,9.3,8.6,14.6,10.4v9.3c0,4.4,3.6,8,8,8s8-3.6,8-8 v-9.3c9.3-3.3,15.9-12.1,15.9-22.5c0-13.2-10.7-23.9-23.9-23.9c-4.4,0-8-3.6-8-8c0-4.4,3.6-8,8-8c2.8,0,5.8,1.4,8.6,4.2 c3.2,3.1,8.2,3,11.3-0.2c3.1-3.2,3-8.2-0.2-11.3c-4-3.9-8.1-6.1-11.7-7.3v-9.3c0-4.4-3.6-8-8-8S261.8,77.1,261.8,81.5z" fill="#FFFFFF"></path>
+            </svg>
+        </div>
+                                <div class="main-block__icon-text">Конкурентная цена  <br>на доставку в Россию</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-block__right">
+                      <div class="main-block__form-container">
+
+                        <div class="main-block__form-inner">
+                            <h2 class="main-block__form-caption">Получить расчет <br><span>10 лучших автомобилей</span><br> в Ваш бюджет <br>  от наших экспертов</h2>
+                            <form class="main-block__form-request" action="/callback" method="post" id="main-form-request">
+
+                                <div class="field-wrap">
+                                    <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+
+                                    <input id="main-form-filed" class="field-input phone-mask clear" type="tel" name="phone" required="" autocomplete="off" placeholder="Телефон" minlength="17" maxlength="17">
+                                    <label class="field-input-label" for="main-form-filed">
+                                        <img src="{% static 'img/telephone.svg' %}" width="24px" height="24px">
+                                    </label>
+                                </div>
+                                
+                                <button id="main-form-submit" type="submit" class="button button-block">Отправить</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feedback" class="feedback">
+        <div class="feedback__container">
+            <h2 class="feedback__caption">Хотите узнавать о  <span>горячих предложениях</span> на американских аукционах первыми?  <br> <br> <span>Оставьте контакты</span> <br>  и наши менеджеры свяжутся с вами!</h2>
+            <form class="subscription__form" action="/callback" method="post">
+                 <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                <div class="subscription__field">
+                    <input class="subscription__name clear" type="text" name="name" placeholder="Имя:" pattern="[А-я]{3,}" required="">
+                    <span class="subscription__error">Это поле должно содержать только кириллицу </span>
+                </div>
+                <div class="subscription__field">
+                    <input class="subscription__phone phone-mask clear" type="tel" name="phone" placeholder="Телефон:" minlength="17" maxlength="17" required="">
+                    <span class="subscription__error">Это поле должно содержать телефон в формате +7 (123) 456-78-90 </span>
+                </div>
+                <p class="subscription__notification">Сообщение отправлено</p>
+                <input class="subscription__send" id="feedback-submit" type="submit" value="Оставить заявку">
+            </form>
+        </div>
+    </section>
+    <section id="advantages" class="advantages">
+        <div class="advantages__container">
+            <h2 class="advantages__caption">Почему заказывают у нас</h2>
+                <div class="advantages__item adaptive--hide">
+                    <img src="{% static 'img/adv_1.png' %}" alt="Досвід" class="advantages__img">
+                    <h3 class="advantages__title">Опыт</h3>
+                    <p class="advantages__desc">Обладаем успешным опытом участия в торгах на аукционах и сотней идеально просчитанных ставок. В итоге покупка авто из США для наших клиентов обходится всего от 15% до 35% рыночной стоимости. Исходя из этого закладываем в просчеты бюджета «под ключ» реальную цену ремонта. Мы знаем и открываем нашим клиентам большую часть всех подводных камней на каждом этапе подбора и импорта автомобиля. При покупке авто из США с компанией Delivery Cars Ваши риски сведены практически к 0, а выгода возрастает до 50%.
+                    </p>
+                </div>
+                <div class="advantages__item adaptive--hide">
+                    <img src="{% static 'img/file_3.svg' %}" alt="Дилерская лицензия США" class="advantages__img">
+                    <h3 class="advantages__title">Дилерская лицензия США</h3>
+                    <p class="advantages__desc">Дилерская лицензия СШАEnjoyCars имеет дилерскую лицензию в США. Работаем на дилерских расширенных правах с аукционами Insurance Auto Auction (IAAI), Copart, Manheim, плюс имеем доступ к зарытым торгам (самые выгодные лоты только для дилеров на территории США). Клиенты компании EnjoyCars экономят при покупке авто в США оплачивая минимальные аукционные сборы.
+                   </p>
+                </div>
+                <div class="advantages__item adaptive--hide">
+                    <img src="{% static 'img/advantages5_4.svg' %}" alt="Надежность и оперативность доставки" class="advantages__img">
+                    <h3 class="advantages__title">Надежность и оперативность доставки</h3>
+                    <p class="advantages__desc">Непрерывная 2-х летняя работа с топ 5 перевозчиками в США и всему миру позволяет нам обеспечить выгодную и безопасную доставку авто наших клиентов из любого штата США и Канады, включая Аляску и Гавайи. Работаем с 7-ю крупнейшими портами. Наши клиенты получают возможность отслеживать свой автомобиль по пути его следования в Украину. Получают 24 часовую поддержку наших менеджеров на всех этапах подбора, покупки и импорта своих автомобилей. Этим самым обеспечиваем своевременную доставку автомобилей наших клиентов по согласованным расчетным ценам.</p>
+                </div>
+                <div class="advantages__item adaptive--hide">
+                    <img src="{% static 'img/oput_svg_5.svg'%}" alt="Гибкость" class="advantages__img">
+                    <h3 class="advantages__title">Гибкость</h3>
+                    <p class="advantages__desc">Delivery Cars сотрудничает с 5 брокерскими компаниями, имеет отлаженную систему растаможки автомобилей не только в Одессе, а и в других городах Украины. Тем самым предоставляет клиентам альтернативу произвести таможенную очистку авто обходя очереди.</p>
+                </div>
+                <div class="advantages__item adaptive--hide">
+                    <img src="{% static 'img/car-insurance_6.svg' %}" alt="Страховка" class="advantages__img">
+                    <h3 class="advantages__title">Страховка</h3>
+                    <p class="advantages__desc">Компания Delivery Cars предоставляет своим клиентам возможность застраховать авто на время транспортировки. Покрываются такие риски как: катастрофы (пожар, кораблекрушение и т.д.); полная потеря груза; несчастные случаи во время доставки; грубая загрузка и выгрузка; хищение запчастей или оборудования. Цена страховки рассчитывается индивидуально для каждой машины (наш эксперт учитывает страховку при просчете авто под ключ).</p>
+                </div>
+                <div class="advantages__item adaptive--hide">
+                    <img src="{% static 'img/licensing_7.svg' %}" alt="Официальный договор" class="advantages__img">
+                    <h3 class="advantages__title">Официальный договор</h3>
+                    <p class="advantages__desc">Компания Delivery Cars – официально действующее на территории Украины общество с ограниченной ответственностью перед клиентом согласно законодательству Украины. Мы проводим официальные сделки по заранее подписанному договору.</p>
+                </div>
+            <div class="advantages__slider adaptive--show owl-carousel owl-theme owl-loaded owl-drag" style="">
+                <div class="advantages__item item">
+    <img src="{% static 'img/4444_1.svg'%}" alt="Опыт" class="advantages__img">
+    <h3 class="advantages__title">Опыт</h3>
+    <p class="advantages__desc">Обладаем успешным опытом участия в торгах на аукционах и сотней идеально просчитанных ставок. В итоге покупка авто из США для наших клиентов обходится всего от 15% до 35% рыночной стоимости. Исходя из этого закладываем в просчеты бюджета «под ключ» реальную цену ремонта. Мы знаем и открываем нашим клиентам большую часть всех подводных камней на каждом этапе подбора и импорта автомобиля. При покупке авто из США с компанией Delivery Cars Ваши риски сведены практически к 0, а выгода возрастает до 50%.</p>
+</div>
+<div class="advantages__item item">
+    <img src="{% static 'img/file_3.svg' %}" alt="Дилерская лицензия США" class="advantages__img">
+    <h3 class="advantages__title">Дилерская лицензия США</h3>
+    <p class="advantages__desc">Дилерская лицензия США EnjoyCars имеет дилерскую лицензию в США. Работаем на дилерских расширенных правах с аукционами Insurance Auto Auction (IAAI), Copart, Manheim, плюс имеем доступ к зарытым торгам (самые выгодные лоты только для дилеров на территории США). Клиенты компании EnjoyCars экономят при покупке авто в США оплачивая минимальные аукционные сборы.
+   </p>
+</div>
+<div class="advantages__item item">
+    <img src="{% static 'img/advantages5_4.svg' %}" alt="Надежность и оперативность доставки" class="advantages__img">
+    <h3 class="advantages__title">Надежность и оперативность доставки</h3>
+    <p class="advantages__desc">Непрерывная 2-х летняя работа с топ 5 перевозчиками в США и всему миру позволяет нам обеспечить выгодную и безопасную доставку авто наших клиентов из любого штата США и Канады, включая Аляску и Гавайи. Работаем с 7-ю крупнейшими портами. Наши клиенты получают возможность отслеживать свой автомобиль по пути его следования в Украину. Получают 24 часовую поддержку наших менеджеров на всех этапах подбора, покупки и импорта своих автомобилей. Этим самым обеспечиваем своевременную доставку автомобилей наших клиентов по согласованным расчетным ценам.
+    </p>
+</div>
+<div class="advantages__item item">
+    <img src="{% static 'img/oput_svg_5.svg'%}" alt="Гибкость" class="advantages__img">
+    <h3 class="advantages__title">Гибкость</h3>
+    <p class="advantages__desc">Delivery Cars сотрудничает с 5 брокерскими компаниями, имеет отлаженную систему растаможки автомобилей не только в Одессе, а и в других городах Украины. Тем самым предоставляет клиентам альтернативу произвести таможенную очистку авто обходя очереди.</p>
+</div>
+<div class="advantages__item item">
+    <img src="{% static 'img/car-insurance_6.svg' %}" alt="Страховка" class="advantages__img">
+    <h3 class="advantages__title">Страховка</h3>
+    <p class="advantages__desc">Компания Delivery Cars предоставляет своим клиентам возможность застраховать авто на время транспортировки. Покрываются такие риски как: катастрофы (пожар, кораблекрушение и т.д.); полная потеря груза; несчастные случаи во время доставки; грубая загрузка и выгрузка; хищение запчастей или оборудования. Цена страховки рассчитывается индивидуально для каждой машины (наш эксперт учитывает страховку при просчете авто под ключ).</p>
+</div>
+<div class="advantages__item item">
+    <img src="{% static 'img/licensing_7.svg' %}" alt="Официальный договор" class="advantages__img">
+    <h3 class="advantages__title">Официальный договор</h3>
+    <p class="advantages__desc">Компания Delivery Cars – официально действующее на территории Украины общество с ограниченной ответственностью перед клиентом согласно законодательству Украины. Мы проводим официальные сделки по заранее подписанному договору.</p>
+</div>
+
+
+            </div>
+    </section>
+    <section id="popular" class="popular">
+    	<div class="popular__container">
+    		<h2 class="popular__caption">Самые выгодные модели на сегодня</h2>
+    		<div class="popular__slider owl-carousel owl-theme owl-loaded owl-drag">
+    			{% include 'includes/item_1.html' %}
+                {% include 'includes/item_2.html' %}
+                {% include 'includes/item_3.html' %}
+    		</div>
+    	</div>
+    </section>
+    <section id="car-select" class="car-select">
+        <div class="car-select__container">
+            <div class="car-select__inner">
+                <h2 class="car-select__caption">Какой автомобиль <br> вас интересует?</h2>
+                <form class="form-top-quizz" action="/callback" method="post" id="form-top-quizz">
+    <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+ <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+
+                    <div class="field-wrap">
+                        <select class="field-select" name="model_type_id">
+                            <option value="def" selected="selected" disabled="disabled">Тип кузова</option>
+                            <option value="3">Седан</option>
+                            <option value="4">Купе</option>
+                            <option value="5">Минивэн</option>
+                            <option value="6">Внедорожник</option>
+                            <option value="7">Пикап</option>
+                            <option value="9">Универсал</option>
+                            <option value="10">Хэтчбек</option>
+                        </select>
+                    </div>
+                    <div class="field-wrap">
+                        <select class="field-select" name="turnkey_budget" id="turnkey_budget">
+                            <option value="def" selected="selected" disabled="disabled">Бюджет под ключ</option>
+                            <option data-discount="125 авто" value="От 7 000$ до 10 000$">От 7 000$ до 10 000$</option>
+                            <option data-discount="94 авто" value="От 10 000$ до 15 000$">От 10 000$ до 15 000$</option>
+                            <option data-discount="43 авто" value="От 15 000$ до 20 000$">От 15 000$ до 20 000$</option>
+                            <option data-discount="51 авто" value="От 20 000$ до 25 000$">От 20 000$ до 25 000$</option>
+                            <option data-discount="37 авто" value="От 25 000$ до 30 000$">От 25 000$ до 30 000$</option>
+                            <option data-discount="46 авто" value="От 30 000$ до 40 000$">От 30 000$ до 40 000$</option>
+                            <option data-discount="87 авто" value="От 40 000$ до 50 000$">От 40 000$ до 50 000$</option>
+                            <option data-discount="87 авто" value="Выше 50 000$">Выше 50 000$</option>
+                    </select>
+                    </div>
+
+                    <div class="field-wrap">
+                        <input class="field-input phone-mask clear" type="tel" name="phone" required="" autocomplete="off" placeholder="Телефон" minlength="17" maxlength="17">
+                    </div>
+
+                    <div class="field-wrap">
+                        <div class="car-select__text" style="display: none">Найдено вариантов <span class="price" id="car_select_discount"></span></div>
+                    </div>
+                    
+
+                    <p class="car-select__notification">Сообщение отправлено</p>
+                    <button id="btn-top-form" type="submit" class="button button-block">Получить подбор</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section cid="stage" class="stage">
+        <div class="stage__container">
+            <h2 class="stage__caption">Шаги к успешной покупке</h2>
+            <div class="stage__blocks adaptive--hide">
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/helloquence-oqmzwnd3thu-unsplash_1.png' %}" alt="Заявка">
+                        <h3 class="stage__title">Заявка</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-1"> Мы вместе определяем Ваши пожелания, потребности и бюджет, знакомим с процессом, формируем техническое задание, фиксируем все в договоре. Очень ВАЖНО правильно посчитать выгодность авто, средняя экономия составляет от 20-50%.</p><p class="more" data-readmore-toggle="rmjs-1" aria-controls="rmjs-1"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/2_2.jpg' %}" alt="Поиск и проверка авто">
+                        <h3 class="stage__title">Поиск и проверка авто</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-2">     Мы подбираем подходящие лоты и полностью проверяем их в 12 этапов (в том числе силами наших представителей в США), предоставляем полную историю эксплуатации от производства до попадания на площадку аукциона. Перед покупкой предоставляем расчет «под ключ» включая все этапы и согласовываем с Вами письменно.</p><p class="more" data-readmore-toggle="rmjs-2" aria-controls="rmjs-2"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/3_3.jpg' %}" alt="Покупка">
+                        <h3 class="stage__title">Покупка</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-3"> По согласованным лотам просчитываем выгодную ставку, используя нашу авторскую стратегию, позволившую нашим клиентам сэкономить несколько сотен тысяч $. Весь процесс аукциона под нашим контролем: участвуем с Вами в онлайн аукционе на торгах, после выигрыша готовим инвойс (международная счет-фактура) на покупку автомобиля и согласно условиям договора Вы оплачиваете свой счёт SWIFT-переводом через банк.</p><p class="more" data-readmore-toggle="rmjs-3" aria-controls="rmjs-3"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/4_4.jpg' %}" alt="Доставка">
+                        <h3 class="stage__title">Доставка</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-4">Оплаченный Вами автомобиль забираем с площадки аукциона и везем автовозом в ближайший порт. На площадке порта отправки делаем дополнительный фотоотчет, готовим экспортные документы, загружаем автомобиль в контейнер и отправляем в Украину. Контейнерная доставка Вашего автомобиля в порт Одесса занимает 6-8 недель. Автомобили клиентов EnjoyCars застрахованы на протяжении всего этапа доставки от площадки аукциона до прибытия в порт Одесса. По прибытию автомобиля в порт Одессы готовим Вам инвойс на оплату доставки и Вы оплачиваете доставку своего авто SWIFT переводом через банк.</p><p class="more" data-readmore-toggle="rmjs-4" aria-controls="rmjs-4"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/5_5.jpg' %}" alt="Растаможка">
+                        <h3 class="stage__title">Растаможка</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-5"> Наша компания контролирует процесс разгрузки и экспедирования контейнера с Вашим автомобилем в порту Одесса. Всю бумажную волокиту и оформление документов берем на себя. Сотрудничаем только с проверенными таможенными брокерами, которые имеют большой опыт растаможки автомобилей из США. Предоставляем Вам документы на оплату таможенных платежей по сниженным тарифам согласно закону №8487. Клиенты EnjoyCars обладают возможностью растаможить свой автомобиль не только в Одессе, а в любом таможенном терминале. После прохождения таможенной процедуры, наши эксперты автовозом доставляют автомобиль на СТО в соответствующий город для диагностики. На этом этапе Вы можете встретиться со своим желанным автомобилем из США!</p><p class="more" data-readmore-toggle="rmjs-5" aria-controls="rmjs-5"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/6_6.jpg' %}" alt="Ремонт">
+                        <h3 class="stage__title">Ремонт</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-6"> Доставляем Ваш автомобиль на СТО, где производим диагностику и дефектовку. EnjoyCars сотрудничает только с проверенными и качественными партнерскими СТО. Весь этот этап находиться под нашим контролем. В кратчайшие сроки с  Вами согласовываем и документально фиксируем список необходимых работ и запчастей. Клиенты EnjoyCars имеют доступ к обширной базе оптовых поставщиков запчастей, имеют возможность быстро и выгодно приобрести необходимые детали на авто любой марки в любом качестве (б/у оригинал, качественный заменитель и новый оригинал). Производим все необходимые работы и готовим автомобиль к сертификации.</p><p class="more" data-readmore-toggle="rmjs-6" aria-controls="rmjs-6"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/7_7.jpg' %}" alt="Сертификация">
+                        <h3 class="stage__title">Сертификация</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-7"> Автомобили клиентов компании EnjoyCars гарантировано получают сертификат соответствия «УКР-ТЕСТ-СТАНДАРТ». Эксперты EnjoyCars просчитывают необходимое переоснащение каждого авто и стоимость еще на этапе подбора на аукционе. Мы напрямую сотрудничаем с сертификационными центрами по всей Украине, контролируем все этапы подготовки и если требуется — занимаемся переоборудованием авто под стандарты законодательства Украины. Обеспечиваем максимально качественное переоснащение авто с минимальными затратами денег и времени наших клиентов. Процесс сертификации автомобилей клиентов EnjoyCars занимает несколько часов, после чего Ваше авто готово для постановки на учет, получения свидетельства о регистрации и украинских номеров.</p><p class="more" data-readmore-toggle="rmjs-7" aria-controls="rmjs-7"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/8_8.jpg' %}" alt="Постановка на учет">
+                        <h3 class="stage__title">Постановка на учет</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-8">После получения сертификата соответствия, в этот же день переходим к заключительному этапу – оформляем Ваш авто в любом удобном для Вас сервисном центре (МРЭО). Эта процедура занимает несколько часов. EnjoyCars полностью контролирует этот процесс, мы готовим все необходимые документы по Вашему авто. Точные цифры всех платежей этой процедуры наши эксперты просчитывают еще на этапе подбора авто на аукционе в США. Как бонус, мы предоставляем нашим клиентам возможность выбора «красивых номеров». После получения украинского свидетельства о регистрации и номеров, вы имеете возможность законно пользоваться на дорогах Украины автомобилем Вашей мечты. EnjoyCars – наслаждайся автомобилем.</p><p class="more" data-readmore-toggle="rmjs-8" aria-controls="rmjs-8"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                                    <div class="stage__item revealator-slideup revealator-once revealator-within">
+                        <img class="stage__img" src="{% static 'img/9_9.jpg' %}" alt="Поддержка">
+                        <h3 class="stage__title">Поддержка</h3>
+                        <p class="stage__desc" style="max-height: none; height: 100px;" data-readmore="" aria-expanded="false" id="rmjs-9">Вы можете полагаться на поддержку экспертов Delivery Cars во время эксплуатации авто на украинских дорогах. Мы в процессе расширения и внедрения системы Delivery Cars Service, где у Вас будет возможность получить услуги страхования, прохождения регламентного технического обслуживания, замены масла и расходников, проведение текущих ремонтов и т.д. для Вашего авто из США у наших партнеров в кратчайшие сроки по оптимальным ценам. Организационные вопросы, бумажную волокиту, а также историю сервисного обслуживания авто берем на себя. Мы работаем над тем, чтобы Вы каждый день наслаждались эксплуатацией авто, планировали и реализовывали поездки о которых давно мечтали.</p><p class="more" data-readmore-toggle="rmjs-9" aria-controls="rmjs-9"><a href="#" class="stage__but">Читать далее</a></p>
+                    </div>
+                            </div>
+        </div>
+    </section>
+    <section class="quotation" style="background: url({% static 'img/motiv_1.jpg' %}) no-repeat center / cover">
+<div class="quotation__container">
+    <div class="quotation__block">
+        <h2 class="quotation__caption">Хотите получить бесплатную консультацию нашего эксперта? ЗАПОЛНИТЕ КРАТКУЮ ФОРМУ ПРЯМО СЕЙЧАС и он ответит на все Ваши вопросы</h2>
+        <a class="main-block__callback js-popup" href="#">Получить консультацию</a>
+    </div>
+    <img class="quotation__img revealator-slideleft revealator-delay2 revealator-once revealator-within" src="{% static 'img/jeep-grand-cherokee-car_1__1__1.png' %}" alt="Хотите получить бесплатную консультацию нашего эксперта? ЗАПОЛНИТЕ КРАТКУЮ ФОРМУ ПРЯМО СЕЙЧАС и он ответит на все Ваши вопросы">
+</div>
+        </section>
+        <section id="services" class="services">
+        <div class="services__container">
+            <h2 class="services__caption">Часто задаваемые вопросы</h2>
+            <p class="services__desc"></p>
+            <div class="services__blocks">
+                                    <div class="services__item">
+                        <h3 class="services__title">Какие гарантии?</h3>
+                        <p class="services__list">
+                           Наша компания — официально зарегистрированное в Украине юридическое лицо. Сотрудничество с каждым клиентом фиксируется Договором. «Delivery Cars» гарантирует выполнение обязательств прописанных в договоре. Мы дорожим своим именем и каждым клиентом. Наши главные ценности — честность, прозрачность на всех этапах и в результате довольный клиент.                        </p>
+                    </div>
+                                    <div class="services__item">
+                        <h3 class="services__title">Насколько выгодно покупать авто из США</h3>
+                        <p class="services__list">
+                            Мы покупаем авто нашим клиентам на страховых аукционах, где каждый день на торги выставляются 130 000 автомобилей по которым уже выплачена страховка. Торги начинаются с $0 и растут с учетом спроса и предложения на авто. Таким образом выбирая лоты с минимальным пробегом, возрастом, небольшими повреждениями у проверенной страховой компании, можно купить авто 2014-2017 года за 10%-30% их рыночной стоимости. В итоге наши клиенты экономят от 15% до 50% стоимости в сравнении с аналогичным авто в Украине.                        </p>
+                    </div>
+                                    <div class="services__item">
+                        <h3 class="services__title">Что означает <br> «под ключ»?</h3>
+                        <p class="services__list">
+                           Компания Delivery Cars берет на себя обязательство в сопровождении клиента на каждом этапе вплоть до доставки полностью готового к эксплуатации авто на украинских номерах по адресу заказчика. Мы минимизируем риски, учитываем все тонкости и берем на себя головную боль связанную с импортом авто из США в Украину. Услуга «под ключ» — это профессиональный подбор и поиск авто согласно потребностям клиента и техническому заданию, просчет выгодности относительно рынка б/у авто в Украине, проверка авто перед аукционом по 12 этапам, выгодная покупка, подготовка документов, доставка, экспедиторские, брокерские услуги, помощь в растаможке, организация качественного восстановления и поиска запчастей, получение сертификата соответствия, помощь в постановке на учет и даже получение «красивых» номеров.                        </p>
+                    </div>
+                            </div>
+            <div id="counter" class="services__counter">
+                                    <div class="services__numeral">
+                        <span class="services__number" style="opacity: 1;">64</span><span>+</span>
+                        <p>Суммарный опыт команды</p>
+                    </div>
+                                    <div class="services__numeral">
+                        <span class="services__number" style="opacity: 1;">6821</span><span>+</span>
+                        <p>Просчет авто</p>
+                    </div>
+                                    <div class="services__numeral">
+                        <span class="services__number" style="opacity: 1;">751</span><span>+</span>
+                        <p>Количество привезенных авто</p>
+                    </div>
+                                    <div class="services__numeral">
+                        <span class="services__number" style="opacity: 1;">1263548</span><span>$</span>
+                        <p>Сумма сэкономленных денег клиентов</p>
+                    </div>
+                            </div>
+        </div>
+    </section>
+    <div class="popup">
+        <h2 class="popup__caption">Связаться с нами</h2><img class="popup__close" src="{% static 'img/x.svg' %}" alt="">
+        <form class="popup__form" action="#">
+             <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+
+            <div class="popup__field">
+                <input class="popup__phone phone-mask clear" type="tel" name="phone" placeholder="Номер телефона" minlength="17" maxlength="17" required="">
+                <span class="popup__error">Это поле должно содержать телефон в формате +38 (123) 456-78-90 </span>
+            </div>
+            <input class="popup__send" id="popupFormSubmit" type="submit" value="Оставить заявку">
+        </form>
+        <p class="popup__notification">Сообщение отправлено</p>
+    </div>
+    <div class="popup-model">
+        <h2 class="popup-model__caption">Связаться с нами</h2><img class="popup-model__close" src="{% static 'img/x.svg' %}" alt="">
+        <form class="popup-model__form" action="#">
+             <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+                                    <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+            <div class="popup-model__field">
+                <input class="popup-model__model" type="text" name="model" required="" disabled="" value="">
+            </div>
+            <div class="popup-model__field">
+                <input class="popup-model__name clear" type="text" name="name" placeholder="Ваше имя" pattern="[А-я]{3,}" required="">
+                <span class="popup-model__error">Это поле должно содержать только кириллицу </span>
+            </div>
+            <div class="popup-model__field">
+                <input class="popup-model__phone phone-mask clear" type="tel" name="phone" placeholder="Номер телефона" minlength="17" maxlength="17" required="">
+                <span class="popup-model__error">Это поле должно содержать телефон в формате +38 (123) 456-78-90 </span>
+            </div>
+            <input class="popup-model__send" id="popupModelSubmit" type="submit" value="Оставить заявку">
+        </form>
+        <p class="popup-model__notification">Сообщение отправлено</p>
+    </div>
+    <div class="popup__overlay"></div>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+<img class="footer__logo" src="{% static 'img/logo.png' %}" alt="">
+                <nav class="footer__menu">
+            <a class="footer__link" href="#advantages">Преимущества</a>
+            <a class="footer__link" href="#stage">Этапы покупки</a>
+            <a class="footer__link" href="#popular">Авто в бюджет</a>
+            <a class="footer__link" href="#services">Вопросы и ответы</a>
+            <a class="footer__link" href="#counter">Показатели</a>
+            <a class="footer__link" href="#team">Наши Эксперты</a>
+            <a class="footer__link" href="#feedback">Подобрать авто</a>
+            <a class="footer__link" href="#contacts">Контакты</a>
+    </nav>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__socials">
+                    {% comment %}
+                    <a href="https://bit.ly/33dKGqF" class="footer__social-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fb" d="M17.3049 0H2.69519C1.20679 0 0.000152588 1.20659 0.000152588 2.69504V17.3049C0.000152588 18.7933 1.20674 19.9999 2.69519 19.9999H9.90064L9.91292 12.853H8.05616C7.81486 12.853 7.61902 12.6579 7.61809 12.4166L7.60918 10.1129C7.60825 9.87025 7.80469 9.67308 8.04731 9.67308H9.90069V7.44709C9.90069 4.86384 11.4784 3.45724 13.7828 3.45724H15.6738C15.9157 3.45724 16.1119 3.65339 16.1119 3.89537V5.83789C16.1119 6.07978 15.9158 6.27587 15.674 6.27602L14.5135 6.27655C13.2603 6.27655 13.0177 6.87207 13.0177 7.74602V9.67313H15.7714C16.0338 9.67313 16.2374 9.90225 16.2064 10.1628L15.9334 12.4666C15.9073 12.687 15.7203 12.8531 15.4984 12.8531H13.0299L13.0177 20H17.305C18.7934 20 20 18.7934 20 17.305V2.69504C20 1.20659 18.7934 0 17.3049 0Z" fill="white"></path>
+                        </svg>
+                    </a>
+                    <a href="https://bit.ly/3aYg6p3" class="footer__social-link">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8463 0.924805H4.15374C1.85969 0.924805 0 2.7845 0 5.07855V10.9236C0 13.2176 1.85969 15.0773 4.15374 15.0773H15.8463C18.1403 15.0773 20 13.2176 20 10.9236V5.07855C20 2.7845 18.1403 0.924805 15.8463 0.924805ZM13.0371 8.28544L7.56814 10.8938C7.42241 10.9633 7.25408 10.8571 7.25408 10.6956V5.31586C7.25408 5.15213 7.42684 5.04601 7.57287 5.12002L13.0418 7.89143C13.2044 7.97381 13.2016 8.207 13.0371 8.28544Z" fill="white"></path>
+                        </svg>
+                    </a>
+                    {% endcomment %}
+                    <a href="https://cutt.ly/9bcxXmR" class="footer__social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 300 300" xml:space="preserve" width="20px" height="20px" class="">
+                            <path d="M5.299,144.645l69.126,25.8l26.756,86.047c1.712,5.511,8.451,7.548,12.924,3.891l38.532-31.412   c4.039-3.291,9.792-3.455,14.013-0.391l69.498,50.457c4.785,3.478,11.564,0.856,12.764-4.926L299.823,29.22   c1.31-6.316-4.896-11.585-10.91-9.259L5.218,129.402C-1.783,132.102-1.722,142.014,5.299,144.645z M96.869,156.711l135.098-83.207   c2.428-1.491,4.926,1.792,2.841,3.726L123.313,180.87c-3.919,3.648-6.447,8.53-7.163,13.829l-3.798,28.146   c-0.503,3.758-5.782,4.131-6.819,0.494l-14.607-51.325C89.253,166.16,91.691,159.907,96.869,156.711z" data-original="#000000" class="active-path" fill="#FFFFFF"></path>
+                        </svg>
+                    </a>
+                    {% comment %}
+                    <a href="https://instagram.com/enjoycars.ua?igshid=YmMyMTA2M2Y=" class="footer__social-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.0419 0.000976562H5.95811C2.67279 0.000976562 0 2.67377 0 5.95908V14.0429C0 17.3282 2.67279 20.001 5.95811 20.001H14.0419C17.3272 20.001 20 17.3282 20 14.0429V5.95908C20 2.67377 17.3272 0.000976562 14.0419 0.000976562ZM17.988 14.0429C17.988 16.2222 16.2213 17.989 14.0419 17.989H5.95811C3.77875 17.989 2.012 16.2222 2.012 14.0429V5.95908C2.012 3.77969 3.77875 2.01298 5.95811 2.01298H14.0419C16.2213 2.01298 17.988 3.77969 17.988 5.95908V14.0429Z" fill="white"></path>
+                            <path d="M9.99998 4.82812C7.14774 4.82812 4.82727 7.1486 4.82727 10.0008C4.82727 12.853 7.14774 15.1735 9.99998 15.1735C12.8522 15.1735 15.1727 12.853 15.1727 10.0008C15.1727 7.14856 12.8522 4.82812 9.99998 4.82812ZM9.99998 13.1615C8.25435 13.1615 6.83927 11.7465 6.83927 10.0008C6.83927 8.25521 8.25439 6.84012 9.99998 6.84012C11.7456 6.84012 13.1607 8.25521 13.1607 10.0008C13.1607 11.7464 11.7456 13.1615 9.99998 13.1615Z" fill="white"></path>
+                            <path d="M15.1827 6.10642C15.8673 6.10642 16.4222 5.55148 16.4222 4.86693C16.4222 4.18238 15.8673 3.62744 15.1827 3.62744C14.4982 3.62744 13.9432 4.18238 13.9432 4.86693C13.9432 5.55148 14.4982 6.10642 15.1827 6.10642Z" fill="white"></path>
+                        </svg>
+                    </a>
+                    {% endcomment %}
+                    <a href="https://cutt.ly/5bckKDE" class="footer__social-link">
+                        <svg width="24" height="24" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44.781 13.156c-.781-2.789-2.328-4.992-4.593-6.55-2.86-1.973-6.149-2.668-8.989-3.094-3.93-.586-7.488-.668-10.883-.254-3.18.39-5.574 1.012-7.757 2.015-4.282 1.97-6.852 5.153-7.637 9.461a58.837 58.837 0 0 0-.79 5.79c-.343 4.171-.03 7.863.954 11.285.96 3.336 2.637 5.718 5.125 7.285.633.398 1.445.687 2.23.965.446.156.88.308 1.235.476.328.153.328.18.324.453-.027 2.371 0 7.02 0 7.02l.008.992h1.781l.29-.281c.19-.18 4.605-4.446 6.179-6.164l.215-.239c.27-.312.27-.312.547-.316 2.125-.043 4.296-.125 6.453-.242 2.613-.14 5.64-.395 8.492-1.582 2.61-1.09 4.515-2.82 5.66-5.14 1.195-2.423 1.902-5.044 2.168-8.016.469-5.227.137-9.762-1.012-13.864zM35.383 33.48c-.656 1.067-1.633 1.81-2.785 2.29-.844.351-1.703.277-2.535-.075-6.965-2.949-12.43-7.593-16.04-14.273-.746-1.375-1.261-2.875-1.855-4.328-.121-.297-.113-.649-.168-.977.05-2.347 1.852-3.672 3.672-4.07.695-.156 1.312.09 1.828.586a16.005 16.005 0 0 1 3.41 4.715c.371.777.203 1.465-.43 2.043-.132.12-.27.23-.414.34-1.445 1.085-1.656 1.91-.886 3.546 1.312 2.785 3.492 4.657 6.308 5.817.742.304 1.442.152 2.008-.45.078-.078.164-.156.219-.25 1.11-1.851 2.723-1.667 4.21-.613.977.696 1.927 1.43 2.891 2.137 1.473 1.082 1.461 2.098.567 3.562zM26.145 15c-.329 0-.657.027-.98.082a.999.999 0 1 1-.328-1.973c.429-.074.87-.109 1.308-.109C30.477 13 34 16.523 34 20.855c0 .442-.035.883-.11 1.31a1 1 0 0 1-1.972-.33A5.865 5.865 0 0 0 26.145 15zM31 21c0 .55-.45 1-1 1s-1-.45-1-1c0-1.652-1.348-3-3-3-.55 0-1-.45-1-1s.45-1 1-1c2.758 0 5 2.242 5 5zm5.71 2.223a1 1 0 0 1-1.952-.446 8.875 8.875 0 0 0 .219-1.96c0-4.86-3.957-8.817-8.817-8.817-.664 0-1.324.074-1.96.219a.996.996 0 0 1-1.196-.754.996.996 0 0 1 .754-1.195c.781-.18 1.59-.27 2.402-.27 5.965 0 10.817 4.852 10.817 10.816 0 .813-.09 1.622-.266 2.407z" fill="white"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer__copywrite">Delivery Cars 2019. Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+	</div>>
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/yii.js' %}"></script>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.spincrement.min.js' %}"></script>
+<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+<script src="{% static 'js/jquery.readmore.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+</html>
