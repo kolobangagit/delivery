@@ -302,7 +302,7 @@ $(".phone-mask").mask("+7(099)999-99-99");
 
 //ajax
 function gratitudeOpen() {
-    var win = window.open('https://www.enjoycars.com.ua/callback', '_self');
+    var win = window.open('https://www.DeliverCars.com.ua/callback', '_self');
     win.focus();
 }
 
@@ -616,6 +616,6 @@ function setDependency(selectorOne, selectorTwo) {
 setDependency('#calculator__auction', '#calculator__platform');
 
 $('.header__logo-link').on('click', function(e) {
-    var win = window.open('https://www.enjoycars.com.ua', '_self');
+    var win = window.open('https://www.DeliverCars.com.ua', '_self');
     win.focus();
 });
