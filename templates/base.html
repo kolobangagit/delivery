@@ -246,44 +246,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="main-block__right">
-                      <div class="main-block__form-container">
+                <div class="main-block__right">
+                  <div class="main-block__form-container">
 
-                        <div class="main-block__form-inner">
-                            <h2 class="main-block__form-caption">Получить расчет <br><span>10 лучших автомобилей</span><br> в Ваш бюджет <br>  от наших экспертов</h2>
-                            <form class="main-block__form-request" action="/callback" method="post" id="main-form-request">
-
-                                <div class="field-wrap">
-                                    <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-
-                                    <input id="main-form-filed" class="field-input phone-mask clear" type="tel" name="phone" required="" autocomplete="off" placeholder="Телефон" minlength="17" maxlength="17">
-                                    <label class="field-input-label" for="main-form-filed">
-                                        <img src="{% static 'img/telephone.svg' %}" width="24px" height="24px">
-                                    </label>
-                                </div>
-                                
-                                <button id="main-form-submit" type="submit" class="button button-block">Отправить</button>
-                            </form>
-                        </div>
-
+            <div class="main-block__form-inner">
+                <h2 class="main-block__form-caption">Получить расчет <br><span>10 лучших автомобилей</span><br> в Ваш бюджет <br>  от наших экспертов</h2>
+                <form class="main-block__form-request" action="" method="post" id="main-form-request">
+                     {% csrf_token %}
+                    <div class="field-wrap">
+                       
+                        <input id="main-form-filed" class="field-input phone-mask clear" type="tel" name="phone" required="" autocomplete="off" placeholder="Телефон" minlength="17" maxlength="17">
+                        <label class="field-input-label" for="main-form-filed">
+                            <img src="{% static 'img/telephone.svg' %}" width="24px" height="24px">
+                        </label>
                     </div>
+                    
+                    <button id="main-form-submit" type="submit" class="button button-block">Отправить</button>
+                </form>
+            </div>
+
                 </div>
             </div>
         </div>
+    </div>
     </section>
     <section id="feedback" class="feedback">
         <div class="feedback__container">
             <h2 class="feedback__caption">Хотите узнавать о  <span>горячих предложениях</span> на американских аукционах первыми?  <br> <br> <span>Оставьте контакты</span> <br>  и наши менеджеры свяжутся с вами!</h2>
-            <form class="subscription__form" action="/callback" method="post">
-                 <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+        <form class="subscription__form" action="" method="post">
+        
                 <div class="subscription__field">
                     <input class="subscription__name clear" type="text" name="name" placeholder="Имя:" pattern="[А-я]{3,}" required="">
                     <span class="subscription__error">Это поле должно содержать только кириллицу </span>
@@ -513,35 +504,31 @@
                            Компания Delivery Cars берет на себя обязательство в сопровождении клиента на каждом этапе вплоть до доставки полностью готового к эксплуатации авто на украинских номерах по адресу заказчика. Мы минимизируем риски, учитываем все тонкости и берем на себя головную боль связанную с импортом авто из США в Россию. Услуга «под ключ» — это профессиональный подбор и поиск авто согласно потребностям клиента и техническому заданию, просчет выгодности относительно рынка б/у авто в России, проверка авто перед аукционом по 12 этапам, выгодная покупка, подготовка документов, доставка, экспедиторские, брокерские услуги, помощь в растаможке, организация качественного восстановления и поиска запчастей, получение сертификата соответствия, помощь в постановке на учет и даже получение «красивых» номеров.                        </p>
                     </div>
                             </div>
-            <div id="counter" class="services__counter">
-                                    <div class="services__numeral">
-                        <span class="services__number" style="opacity: 1;">64</span><span>+</span>
-                        <p>Суммарный опыт команды</p>
-                    </div>
-                                    <div class="services__numeral">
-                        <span class="services__number" style="opacity: 1;">6821</span><span>+</span>
-                        <p>Просчет авто</p>
-                    </div>
-                                    <div class="services__numeral">
-                        <span class="services__number" style="opacity: 1;">751</span><span>+</span>
-                        <p>Количество привезенных авто</p>
-                    </div>
-                                    <div class="services__numeral">
-                        <span class="services__number" style="opacity: 1;">1263548</span><span>$</span>
-                        <p>Сумма сэкономленных денег клиентов</p>
-                    </div>
-                            </div>
+        {% comment %}
+        <div id="counter" class="services__counter">
+            <div class="services__numeral">
+                <span class="services__number" style="opacity: 1;">64</span><span>+</span>
+                <p>Суммарный опыт команды</p>
+            </div>
+            <div class="services__numeral">
+                <span class="services__number" style="opacity: 1;">6821</span><span>+</span>
+                <p>Просчет авто</p>
+            </div>
+            <div class="services__numeral">
+                <span class="services__number" style="opacity: 1;">751</span><span>+</span>
+                <p>Количество привезенных авто</p>
+            </div>
+            <div class="services__numeral">
+                <span class="services__number" style="opacity: 1;">1263548</span><span>$</span>
+                <p>Сумма сэкономленных денег клиентов</p>
+            </div>
+        </div>
+        {% endcomment %}
         </div>
     </section>
     <div class="popup">
         <h2 class="popup__caption">Связаться с нами</h2><img class="popup__close" src="{% static 'img/x.svg' %}" alt="">
         <form class="popup__form" action="#">
-             <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-
             <div class="popup__field">
                 <input class="popup__phone phone-mask clear" type="tel" name="phone" placeholder="Номер телефона" minlength="17" maxlength="17" required="">
                 <span class="popup__error">Это поле должно содержать телефон в формате +38 (123) 456-78-90 </span>
@@ -553,11 +540,7 @@
     <div class="popup-model">
         <h2 class="popup-model__caption">Связаться с нами</h2><img class="popup-model__close" src="{% static 'img/x.svg' %}" alt="">
         <form class="popup-model__form" action="#">
-             <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                                    <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
+        <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
             <div class="popup-model__field">
                 <input class="popup-model__model" type="text" name="model" required="" disabled="" value="">
             </div>
@@ -571,7 +554,7 @@
             </div>
             <input class="popup-model__send" id="popupModelSubmit" type="submit" value="Оставить заявку">
         </form>
-        <p class="popup-model__notification">Сообщение отправлено</p>
+    <p class="popup-model__notification">Сообщение отправлено</p>
     </div>
     <div class="popup__overlay"></div>
 
@@ -605,7 +588,7 @@
                         </svg>
                     </a>
                     {% endcomment %}
-                    <a href="https://cutt.ly/9bcxXmR" class="footer__social-link">
+                    <a href="" class="footer__social-link">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 300 300" xml:space="preserve" width="20px" height="20px" class="">
                             <path d="M5.299,144.645l69.126,25.8l26.756,86.047c1.712,5.511,8.451,7.548,12.924,3.891l38.532-31.412   c4.039-3.291,9.792-3.455,14.013-0.391l69.498,50.457c4.785,3.478,11.564,0.856,12.764-4.926L299.823,29.22   c1.31-6.316-4.896-11.585-10.91-9.259L5.218,129.402C-1.783,132.102-1.722,142.014,5.299,144.645z M96.869,156.711l135.098-83.207   c2.428-1.491,4.926,1.792,2.841,3.726L123.313,180.87c-3.919,3.648-6.447,8.53-7.163,13.829l-3.798,28.146   c-0.503,3.758-5.782,4.131-6.819,0.494l-14.607-51.325C89.253,166.16,91.691,159.907,96.869,156.711z" data-original="#000000" class="active-path" fill="#FFFFFF"></path>
                         </svg>
@@ -619,7 +602,7 @@
                         </svg>
                     </a>
                     {% endcomment %}
-                    <a href="https://cutt.ly/5bckKDE" class="footer__social-link">
+                    <a href="" class="footer__social-link">
                         <svg width="24" height="24" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M44.781 13.156c-.781-2.789-2.328-4.992-4.593-6.55-2.86-1.973-6.149-2.668-8.989-3.094-3.93-.586-7.488-.668-10.883-.254-3.18.39-5.574 1.012-7.757 2.015-4.282 1.97-6.852 5.153-7.637 9.461a58.837 58.837 0 0 0-.79 5.79c-.343 4.171-.03 7.863.954 11.285.96 3.336 2.637 5.718 5.125 7.285.633.398 1.445.687 2.23.965.446.156.88.308 1.235.476.328.153.328.18.324.453-.027 2.371 0 7.02 0 7.02l.008.992h1.781l.29-.281c.19-.18 4.605-4.446 6.179-6.164l.215-.239c.27-.312.27-.312.547-.316 2.125-.043 4.296-.125 6.453-.242 2.613-.14 5.64-.395 8.492-1.582 2.61-1.09 4.515-2.82 5.66-5.14 1.195-2.423 1.902-5.044 2.168-8.016.469-5.227.137-9.762-1.012-13.864zM35.383 33.48c-.656 1.067-1.633 1.81-2.785 2.29-.844.351-1.703.277-2.535-.075-6.965-2.949-12.43-7.593-16.04-14.273-.746-1.375-1.261-2.875-1.855-4.328-.121-.297-.113-.649-.168-.977.05-2.347 1.852-3.672 3.672-4.07.695-.156 1.312.09 1.828.586a16.005 16.005 0 0 1 3.41 4.715c.371.777.203 1.465-.43 2.043-.132.12-.27.23-.414.34-1.445 1.085-1.656 1.91-.886 3.546 1.312 2.785 3.492 4.657 6.308 5.817.742.304 1.442.152 2.008-.45.078-.078.164-.156.219-.25 1.11-1.851 2.723-1.667 4.21-.613.977.696 1.927 1.43 2.891 2.137 1.473 1.082 1.461 2.098.567 3.562zM26.145 15c-.329 0-.657.027-.98.082a.999.999 0 1 1-.328-1.973c.429-.074.87-.109 1.308-.109C30.477 13 34 16.523 34 20.855c0 .442-.035.883-.11 1.31a1 1 0 0 1-1.972-.33A5.865 5.865 0 0 0 26.145 15zM31 21c0 .55-.45 1-1 1s-1-.45-1-1c0-1.652-1.348-3-3-3-.55 0-1-.45-1-1s.45-1 1-1c2.758 0 5 2.242 5 5zm5.71 2.223a1 1 0 0 1-1.952-.446 8.875 8.875 0 0 0 .219-1.96c0-4.86-3.957-8.817-8.817-8.817-.664 0-1.324.074-1.96.219a.996.996 0 0 1-1.196-.754.996.996 0 0 1 .754-1.195c.781-.18 1.59-.27 2.402-.27 5.965 0 10.817 4.852 10.817 10.816 0 .813-.09 1.622-.266 2.407z" fill="white"></path>
                         </svg>
@@ -640,7 +623,37 @@
 <script src="{% static 'js/jquery.readmore.min.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script>
+ $(document).ready(function() {
+   $('#main-form-request').on('submit', function(e){
+    e.preventDefault();
+    $('.subscription__notification').text('Сообщение отправлено').css('display', 'none');
+    let phone = $("#main-form-request input[name='phone']").val();
+    let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]');
+    $.ajax({
+        type: "POST",
+        url: "/send-info/",
+        data: {
+            phone: phone,
+            csrfmiddlewaretoken: csrfmiddlewaretoken.val()
+        },
+        success: function(response){
+            if(response.status === true){
+                $('.subscription__notification').css('display', 'block')
+                $('#main-form-submit').prop('disabled', true);
+            } else {
+                $('.subscription__notification').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
+            }
 
+        }
+
+    })
+
+        
+    
+    })
+ })
+</script>
 
 </body>
 </html>
