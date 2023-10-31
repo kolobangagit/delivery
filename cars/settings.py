@@ -27,7 +27,8 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ["DOMAIN_NAME"]
+# ALLOWED_HOSTS = os.environ["DOMAIN_NAME"]
+ALLOWED_HOSTS = "delivery-cars.ru"
 
 
 # Application definition
