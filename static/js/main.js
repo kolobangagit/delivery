@@ -591,8 +591,8 @@ $('#turnkey_budget').change(function() {
 $(function(){
     $('.stage__desc').readmore({
         speed: 500,
-        lessLink: '<p class="more"><a href="#" class="stage__but">РЎРІРµСЂРЅСѓС‚СЊ</a></p>',
-        moreLink: '<p class="more"><a href="#" class="stage__but">Р§РёС‚Р°С‚СЊ РґР°Р»РµРµ</a></p>',
+        lessLink: '<p class="more"><a href="#" class="stage__but">Свернуть</a></p>',
+        moreLink: '<p class="more"><a href="#" class="stage__but">Читать далее</a></p>',
         collapsedHeight: 100,
     });
 });
