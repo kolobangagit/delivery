@@ -637,7 +637,7 @@
 <script src="{% static 'js/main.js' %}"></script>
 <script>
  $(document).ready(function() {
-    $('.subscription__notification_step-1').text('Сообщение отправлено').css('display', 'none');
+    $('.subscription__notification__step-1').css('display', 'none');
    $('#main-form-request').on('submit', function(e){
     e.preventDefault();
     let phone = $("#main-form-request input[name='phone']").val();
@@ -651,7 +651,7 @@
         },
         success: function(response){
             if(response.status === true){
-                $('.subscription__notification-step-1').css('display', 'block')
+                $('.subscription__notification__step-1').css('display', 'block')
                 $('#main-form-submit').prop('disabled', true);
             } else {
                 $('.subscription__notification').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
