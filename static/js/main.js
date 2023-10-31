@@ -586,6 +586,12 @@ $('#turnkey_budget').change(function() {
     $('#car_select_discount').text($(this).find(':selected').data('discount'));
 });
 
+$('.stage__desc').readmore({
+    speed: 500,
+    lessLink: '<p class="more"><a href="#" class="stage__but">Свернуть</a></p>',
+    moreLink: '<p class="more"><a href="#" class="stage__but">Читать далее</a></p>',
+    collapsedHeight: 100,
+});
 
 //spoiler
 $(function(){
