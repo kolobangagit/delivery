@@ -384,7 +384,9 @@
             <div class="car-select__inner">
                 <h2 class="car-select__caption">Какой автомобиль <br> вас интересует?</h2>
                 <form class="form-top-quizz" action="" method="post" id="form-top-quizz">
+                    {% csrf_token %}
                     <div class="field-wrap">
+
                 <select class="field-select" name="model_type_id" id="model_type_id">
                     <option value="def" selected="selected" disabled="disabled">Тип кузова</option>
                     <option value="3">Седан</option>
