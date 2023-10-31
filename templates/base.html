@@ -637,9 +637,9 @@
 <script src="{% static 'js/main.js' %}"></script>
 <script>
  $(document).ready(function() {
+    $('.subscription__notification').text('Сообщение отправлено').css('display', 'none');
    $('#main-form-request').on('submit', function(e){
     e.preventDefault();
-    $('.subscription__notification').text('Сообщение отправлено').css('display', 'none');
     let phone = $("#main-form-request input[name='phone']").val();
     let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]');
     $.ajax({
