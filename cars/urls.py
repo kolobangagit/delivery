@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from .utils import send_bot_info
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="base.html")),
-    # path('send-info/', send_bot_info, name="send_bot_info")
+    path('send-info/', send_bot_info, name="send_bot_info")
 ]
