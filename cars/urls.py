@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from cars.utils import send_bot_info
 
 urlpatterns = [
     path('admin/', admin.site.urls),
