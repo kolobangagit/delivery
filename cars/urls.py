@@ -21,5 +21,6 @@ from .utils import send_bot_info
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="base.html")),
-    path('send-info/', send_bot_info, name="send_bot_info")
+    path('send-info/', send_bot_info, name="send_bot_info"),
+    path('send-info-step-2/', send_bot_info_step_2, name='send-info-step-2')
 ]

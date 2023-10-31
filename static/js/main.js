@@ -311,28 +311,28 @@ function formSend() {
     $('.subscription__notification').show(500);
 }
 
-$(".subscription__form").on('submit', function (e) {
-    e.preventDefault();
-    $.ajax({
-        type: 'post',
-        url: '/callback',
-        data: $(this).serialize(),
-        dataType: "json",
-        success: function (data) {
-            formSend();
-            dataLayer.push({
-              'event' : 'GAEvent',
-              'eventCategory' : 'Form Submit',
-              'eventAction' : 'Order',
-              'eventLabel' : 'marka'
-             });
-            gratitudeOpen();
-        },
-        error: function (error) {
-            alert('РћС€РёР±РєР° СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ СЃРµСЂРІРµСЂРѕРј, РїРѕРїСЂРѕР±СѓР№С‚Рµ РѕС‚РїСЂР°РІРёС‚СЊ Р·Р°СЏРІРєСѓ РїРѕР·Р¶Рµ.');
-        }
-    });
-});
+// $(".subscription__form").on('submit', function (e) {
+//     e.preventDefault();
+//     $.ajax({
+//         type: 'post',
+//         url: '/callback',
+//         data: $(this).serialize(),
+//         dataType: "json",
+//         success: function (data) {
+//             formSend();
+//             dataLayer.push({
+//               'event' : 'GAEvent',
+//               'eventCategory' : 'Form Submit',
+//               'eventAction' : 'Order',
+//               'eventLabel' : 'marka'
+//              });
+//             gratitudeOpen();
+//         },
+//         error: function (error) {
+//             alert('РћС€РёР±РєР° СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ СЃРµСЂРІРµСЂРѕРј, РїРѕРїСЂРѕР±СѓР№С‚Рµ РѕС‚РїСЂР°РІРёС‚СЊ Р·Р°СЏРІРєСѓ РїРѕР·Р¶Рµ.');
+//         }
+//     });
+// });
 
 function formSend2() {
     $('.popup__form .clear').val('');

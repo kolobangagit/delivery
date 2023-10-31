@@ -637,8 +637,9 @@
 <script src="{% static 'js/main.js' %}"></script>
 <script>
  $(document).ready(function() {
-    $('.subscription__notification__step-1').css('display', 'none');
-   $('#main-form-request').on('submit', function(e){
+    $('.subscription__notification__step-1').text('Сообщение отправлено').css('display', 'none');
+    $('.subscription__notification').text('Сообщение отправлено').css('display', 'none');
+    $('#main-form-request').on('submit', function(e){
     e.preventDefault();
     let phone = $("#main-form-request input[name='phone']").val();
     let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]');
@@ -653,6 +654,32 @@
             if(response.status === true){
                 $('.subscription__notification__step-1').css('display', 'block')
                 $('#main-form-submit').prop('disabled', true);
+            } else {
+                $('.subscription__notification__step-1').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
+            }
+
+        }
+
+    })
+    
+    })
+    $('.subscription__form').on('submit', function(e){
+    e.preventDefault();
+    let name = $(".subscription__form input[name='name']").val();
+    let phone = $(".subscription__form input[name='phone']").val();
+    let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]');
+    $.ajax({
+        type: "POST",
+        url: "/send-info-step-2/",
+        data: {
+            name: name,
+            phone: phone,
+            csrfmiddlewaretoken: csrfmiddlewaretoken.val()
+        },
+        success: function(response){
+            if(response.status === true){
+                $('.subscription__notification').css('display', 'block')
+                $('.subscription__send').prop('disabled', true);
             } else {
                 $('.subscription__notification').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
             }

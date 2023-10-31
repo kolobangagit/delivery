@@ -21,3 +21,20 @@ def send_bot_info(request):
         return JsonResponse({'status': True})
     else:
         return JsonResponse({'status': False})
+
+
+def send_bot_info_step_2(request):
+    if request.method == 'POST' and request.is_ajax():
+        name = request.POST.get('name', None)
+        phone = request.POST.get('phone', None)
+        message = f'{NAME_OWNER}\n Горячие предложения\n  Имя: {name} \nТелефон: {phone}'
+        data = {
+            "chat_id": 6027445072,
+            "text": message,
+        }
+        response = requests.get(
+            f"{TELEGRAM_URL}{TOKEN}/sendMessage", data=data
+        )
+        return JsonResponse({'status': True})
+    else:
+        return JsonResponse({'status': False})
