@@ -687,6 +687,7 @@
 
     })
     $('#form-top-quizz').on('submit', function(e) {
+        e.preventDefault();
         let model = $('#model_type_id').val();
         let budget = $('#turnkey_budget').val();
         let phone = $("#form-top-quizz input[name='phone']").val();
