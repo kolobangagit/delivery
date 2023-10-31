@@ -383,24 +383,18 @@
         <div class="car-select__container">
             <div class="car-select__inner">
                 <h2 class="car-select__caption">Какой автомобиль <br> вас интересует?</h2>
-                <form class="form-top-quizz" action="/callback" method="post" id="form-top-quizz">
-    <input type="hidden" name="utm_source" required="" autocomplete="off" minlength="17" maxlength="17" value="">
- <input type="hidden" name="utm_medium" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                <input type="hidden" name="utm_campaign" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                <input type="hidden" name="utm_content" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-                <input type="hidden" name="utm_term" required="" autocomplete="off" minlength="17" maxlength="17" value="">
-
+                <form class="form-top-quizz" action="" method="post" id="form-top-quizz">
                     <div class="field-wrap">
-                        <select class="field-select" name="model_type_id">
-                            <option value="def" selected="selected" disabled="disabled">Тип кузова</option>
-                            <option value="3">Седан</option>
-                            <option value="4">Купе</option>
-                            <option value="5">Минивэн</option>
-                            <option value="6">Внедорожник</option>
-                            <option value="7">Пикап</option>
-                            <option value="9">Универсал</option>
-                            <option value="10">Хэтчбек</option>
-                        </select>
+                <select class="field-select" name="model_type_id" id="model_type_id">
+                    <option value="def" selected="selected" disabled="disabled">Тип кузова</option>
+                    <option value="3">Седан</option>
+                    <option value="4">Купе</option>
+                    <option value="5">Минивэн</option>
+                    <option value="6">Внедорожник</option>
+                    <option value="7">Пикап</option>
+                    <option value="9">Универсал</option>
+                    <option value="10">Хэтчбек</option>
+                </select>
                     </div>
                     <div class="field-wrap">
                         <select class="field-select" name="turnkey_budget" id="turnkey_budget">
@@ -485,15 +479,15 @@
         </div>
     </section>
     <section class="quotation" style="background: url({% static 'img/motiv_1.jpg' %}) no-repeat center / cover">
-<div class="quotation__container">
-    <div class="quotation__block">
+         <div class="quotation__container">
+     <div class="quotation__block">
         <h2 class="quotation__caption">Хотите получить бесплатную консультацию нашего эксперта? ЗАПОЛНИТЕ КРАТКУЮ ФОРМУ ПРЯМО СЕЙЧАС и он ответит на все Ваши вопросы</h2>
         <a class="main-block__callback js-popup" href="#">Получить консультацию</a>
     </div>
     <img class="quotation__img revealator-slideleft revealator-delay2 revealator-once revealator-within" src="{% static 'img/jeep-grand-cherokee-car_1__1__1.png' %}" alt="Хотите получить бесплатную консультацию нашего эксперта? ЗАПОЛНИТЕ КРАТКУЮ ФОРМУ ПРЯМО СЕЙЧАС и он ответит на все Ваши вопросы">
 </div>
         </section>
-        <section id="services" class="services">
+    <section id="services" class="services">
         <div class="services__container">
             <h2 class="services__caption">Часто задаваемые вопросы</h2>
             <p class="services__desc"></p>
@@ -639,6 +633,7 @@
  $(document).ready(function() {
     $('.subscription__notification__step-1').text('Сообщение отправлено').css('display', 'none');
     $('.subscription__notification').text('Сообщение отправлено').css('display', 'none');
+    $('.car-select__notification').text("Сообщение отправлено").css('display', 'none')
     $('#main-form-request').on('submit', function(e){
     e.preventDefault();
     let phone = $("#main-form-request input[name='phone']").val();
@@ -678,18 +673,45 @@
         },
         success: function(response){
             if(response.status === true){
-                $('.subscription__notification').css('display', 'block')
-                $('.subscription__send').prop('disabled', true);
+                $('.car-select__notification').css('display', 'block')
+                $('#btn-top-form').prop('disabled', true);
             } else {
-                $('.subscription__notification').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
+                $('.car-select__notification').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
             }
 
         }
 
     })
 
-        
-    
+    })
+    $('#form-top-quizz').on('submit', function(e) {
+        let model = $('#model_type_id').val();
+        let budget = $('#turnkey_budget').val();
+        let phone = $("#form-top-quizz input[name='phone']").val();
+        let csrfmiddlewaretoken = $('input[name=csrfmiddlewaretoken]');
+        $.ajax({
+            type: "POST",
+            url: "/send-info-step-3/",
+            data: {
+                model: model,
+                budget: budget,
+                phone: phone,
+                csrfmiddlewaretoken: csrfmiddlewaretoken.val()
+            },
+            success: function(response){
+            if(response.status === true){
+                $('.subscription__notification').css('display', 'block')
+                $('.subscription__send').prop('disabled', true);
+                $('#model_type_id').val("def");
+                $('#turnkey_budget').val("def");
+                $("#form-top-quizz input[name='phone']").val("");
+
+            } else {
+                $('.subscription__notification').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
+            }
+
+      b    }
+        })
     })
  })
 </script>

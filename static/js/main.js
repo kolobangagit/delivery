@@ -557,29 +557,29 @@ function formCarSelectSend() {
     $('.car-select__notification').show(100);
 }
 
-$(".form-top-quizz").on('submit', function (e) {
-    e.preventDefault();
-    $.ajax({
-        type: 'post',
-        url: '/callback',
-        data: $(this).serialize(),
-        dataType: "json",
-        success: function (data) {
-            formCarSelectSend();
-            dataLayer.push({
-              'event' : 'GAEvent',
-              'eventCategory' : 'Form Submit',
-              'eventAction' : 'Order',
-              'eventLabel' : 'marka'
-            });
-            gratitudeOpen();
-        },
-        error: function (error) {
-            alert(jQuery.parseJSON(error.responseText).message);
-            alert('РћС€РёР±РєР° СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ СЃРµСЂРІРµСЂРѕРј, РїРѕРїСЂРѕР±СѓР№С‚Рµ РѕС‚РїСЂР°РІРёС‚СЊ Р·Р°СЏРІРєСѓ РїРѕР·Р¶Рµ.');
-        }
-    });
-});
+// $(".form-top-quizz").on('submit', function (e) {
+//     e.preventDefault();
+//     $.ajax({
+//         type: 'post',
+//         url: '/callback',
+//         data: $(this).serialize(),
+//         dataType: "json",
+//         success: function (data) {
+//             formCarSelectSend();
+//             dataLayer.push({
+//               'event' : 'GAEvent',
+//               'eventCategory' : 'Form Submit',
+//               'eventAction' : 'Order',
+//               'eventLabel' : 'marka'
+//             });
+//             gratitudeOpen();
+//         },
+//         error: function (error) {
+//             alert(jQuery.parseJSON(error.responseText).message);
+//             alert('РћС€РёР±РєР° СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ СЃРµСЂРІРµСЂРѕРј, РїРѕРїСЂРѕР±СѓР№С‚Рµ РѕС‚РїСЂР°РІРёС‚СЊ Р·Р°СЏРІРєСѓ РїРѕР·Р¶Рµ.');
+//         }
+//     });
+// });
 
 $('#turnkey_budget').change(function() {
     $('.car-select__text').css("display", "block");
