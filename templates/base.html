@@ -703,14 +703,14 @@
             },
             success: function(response){
             if(response.status === true){
-                $('.subscription__notification').css('display', 'block')
-                $('.subscription__send').prop('disabled', true);
+                $('.car-select__notification').css('display', 'block')
+                $('.button_block').prop('disabled', true);
                 $('#model_type_id').val("def");
                 $('#turnkey_budget').val("def");
                 $("#form-top-quizz input[name='phone']").val("");
 
             } else {
-                $('.subscription__notification').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
+                $('.car-select__notification').text("Отправка cсообщения не удалась попробуйте позже").css('display', 'block')
             }
 
            }
