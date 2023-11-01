@@ -48,7 +48,7 @@ def send_bot_info_step_3(request):
         model = request.POST.get('model', None)
         phone = request.POST.get('phone', None)
         budget = request.POST.get('budget', None)
-        message = f'{NAME_OWNER}\n Какой автомобиль вас интересует?\n Модель : {MODEL_DICT[model]}\n Бюджет: {budget} \nТелефон: {phone}'
+        message = f'{NAME_OWNER}\n Какой автомобиль вас интересует?\n Модель : {MODEL_DICT[int(model)]}\n Бюджет: {budget} \nТелефон: {phone}'
         data = {
             "chat_id": 6027445072,
             "text": message,
