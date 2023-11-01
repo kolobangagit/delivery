@@ -146,3 +146,25 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 DOMAIN_NAME = os.getenv("DOMAIN_NAME")
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': config('LOG_FILENAME'),
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        
+    },
+
+}
