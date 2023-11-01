@@ -43,7 +43,7 @@ def send_bot_info_step_2(request):
         return JsonResponse({'status': False})
 
 
-def send_info_step_3(request):
+def send_bot_info_step_3(request):
     if request.method == 'POST' and request.is_ajax():
         model = request.POST.get('model', None)
         phone = request.POST.get('phone', None)
