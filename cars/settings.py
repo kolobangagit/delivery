@@ -155,7 +155,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': config('LOG_FILENAME'),
+            'filename': os.getenv('LOG_FILENAME'),
         },
     },
     'loggers': {
