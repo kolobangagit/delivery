@@ -6,6 +6,9 @@ TELEGRAM_URL = "https://api.telegram.org/bot"
 TOKEN = '6569461259:AAEu8HfH6vohmD3QK93CUkDKX6D5nLuRzV4'
 NAME_OWNER = 'DELIVERY CARS'
 
+MODEL_DICT = {
+    3: 'Седан', 4: 'Купе', 5: 'Минивэн', 6: 'Внедорожник', 7: 'Пикап', 9: 'Универсал', 10: 'Хэтчбек' 
+}
 
 def send_bot_info(request):
     if request.method == 'POST' and request.is_ajax():
@@ -28,6 +31,24 @@ def send_bot_info_step_2(request):
         name = request.POST.get('name', None)
         phone = request.POST.get('phone', None)
         message = f'{NAME_OWNER}\n Горячие предложения\n  Имя: {name} \nТелефон: {phone}'
+        data = {
+            "chat_id": 6027445072,
+            "text": message,
+        }
+        response = requests.get(
+            f"{TELEGRAM_URL}{TOKEN}/sendMessage", data=data
+        )
+        return JsonResponse({'status': True})
+    else:
+        return JsonResponse({'status': False})
+
+
+def send_info_step_3(request):
+    if request.method == 'POST' and request.is_ajax():
+        model = request.POST.get('model', None)
+        phone = request.POST.get('phone', None)
+        budget = request.POST.get('budget', None)
+        message = f'{NAME_OWNER}\n Какой автомобиль вас интересует?\n Модель : {MODEL_DICT[model]}\n Бюджет: {budget} \nТелефон: {phone}'
         data = {
             "chat_id": 6027445072,
             "text": message,
