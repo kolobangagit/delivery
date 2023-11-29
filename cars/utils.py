@@ -15,7 +15,7 @@ def send_bot_info(request):
         phone = request.POST.get('phone', None)
         message = f'{NAME_OWNER}\n 10 лучших автомобилей\n Телефон: {phone}'
         data = {
-            "chat_id": 6027445072,
+            "chat_id": 6512580170,
             "text": message,
         }
         response = requests.get(
@@ -32,7 +32,7 @@ def send_bot_info_step_2(request):
         phone = request.POST.get('phone', None)
         message = f'{NAME_OWNER}\n Горячие предложения\n  Имя: {name} \nТелефон: {phone}'
         data = {
-            "chat_id": 6027445072,
+            "chat_id": 6512580170,
             "text": message,
         }
         response = requests.get(
@@ -50,7 +50,7 @@ def send_bot_info_step_3(request):
         budget = request.POST.get('budget', None)
         message = f'{NAME_OWNER}\n Какой автомобиль вас интересует?\n Модель : {MODEL_DICT[int(model)]}\n Бюджет: {budget} \nТелефон: {phone}'
         data = {
-            "chat_id": 6027445072,
+            "chat_id": 6512580170,
             "text": message,
         }
         response = requests.get(
