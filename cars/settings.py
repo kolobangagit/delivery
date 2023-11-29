@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'analytical',
 ]
 
 MIDDLEWARE = [
@@ -146,6 +147,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 DOMAIN_NAME = os.getenv("DOMAIN_NAME")
+
+YANDEX_METRICA_COUNTER_ID = '95718869'
 
 
 LOGGING = {
