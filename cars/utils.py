@@ -3,7 +3,7 @@ import requests
 from django.http import JsonResponse
 
 TELEGRAM_URL = "https://api.telegram.org/bot"
-TOKEN = '6861020059:AAHnG8RYH9eiE15sg9wM17BikgnPISpxXf4'
+TOKEN = '6840199031:AAFoshpO0dTv2l1rsM9hBLjqL98iL-YNLXI'
 NAME_OWNER = 'DELIVERY CARS'
 
 MODEL_DICT = {
@@ -15,7 +15,7 @@ def send_bot_info(request):
         phone = request.POST.get('phone', None)
         message = f'{NAME_OWNER}\n 10 лучших автомобилей\n Телефон: {phone}'
         data = {
-            "chat_id": 6512580170,
+            "chat_id": 6746800266,
             "text": message,
         }
         response = requests.get(
@@ -32,7 +32,7 @@ def send_bot_info_step_2(request):
         phone = request.POST.get('phone', None)
         message = f'{NAME_OWNER}\n Горячие предложения\n  Имя: {name} \nТелефон: {phone}'
         data = {
-            "chat_id": 6512580170,
+            "chat_id": 6746800266,
             "text": message,
         }
         response = requests.get(
@@ -50,7 +50,7 @@ def send_bot_info_step_3(request):
         budget = request.POST.get('budget', None)
         message = f'{NAME_OWNER}\n Какой автомобиль вас интересует?\n Модель : {MODEL_DICT[int(model)]}\n Бюджет: {budget} \nТелефон: {phone}'
         data = {
-            "chat_id": 6512580170,
+            "chat_id": 6746800266,
             "text": message,
         }
         response = requests.get(
